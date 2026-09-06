@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowUpRight, BarChart3, Braces, Database, Download, ExternalLink, FileText, Headphones, Network, ShieldCheck, TerminalSquare, Wrench, X } from "lucide-react";
+import { ArrowUpRight, BarChart3, Braces, Database, Download, ExternalLink, FileText, Network, ShieldCheck, TerminalSquare, Wrench, X } from "lucide-react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
@@ -14,10 +14,10 @@ const icons = [<ShieldCheck key="a" />, <Wrench key="b" />, <Braces key="c" />, 
 export default function Home() {
   const [activeCaseStudy, setActiveCaseStudy] = useState<(typeof projects)[number] | null>(null);
   const projectVisuals = {
-    mapper: <div className="project-visual mapper-visual" role="img" aria-label="SAP Master Data Mapper project visualization"><Network size={38} /><span>PLANT</span><span>SLOC</span><i /><i /><i /></div>,
+    mapper: <div className="project-visual mapper-visual" role="img" aria-label="SAP Master Data Mapper project visualization"><div className="mapper-root">MATERIAL</div><div className="mapper-branch branch-one"><b>PLANT 01</b><span>SLOC A</span><span>SLOC B</span><span>SLOC C</span></div><div className="mapper-branch branch-two"><b>PLANT 02</b><span>SLOC A</span><span>SLOC B</span></div><small className="visual-stamp">MAPPING / VALIDATE / GENERATE</small></div>,
     dashboard: <div className="project-visual dashboard-visual"><Image src="/dashboard.png" alt="ERP Task Monitoring Dashboard preview showing ticket status, workload, departments, priorities, and SLA reporting" width={1904} height={880} style={{ width: "100%", height: "auto", display: "block" }} /></div>,
-    materials: <div className="project-visual materials-visual" role="img" aria-label="SAP Material Master Data Tools project visualization"><Database size={38} /><div><span>EXTRACT</span><span>VALIDATE</span><span>TRANSFORM</span><span>MIGRATE</span></div></div>,
-    itsm: <div className="project-visual itsm-visual" role="img" aria-label="Mary Grace ITSM project visualization"><Headphones size={38} /><div><span>NEW TICKET</span><span>ASSIGNED</span><span>MONITOR SLA</span></div></div>,
+    materials: <div className="project-visual materials-visual" role="img" aria-label="SAP Material Master Data Tools project visualization"><div className="process-node">SAP MATERIAL</div><div className="process-flow"><span>EXTRACT</span><i /><span>VALIDATE</span><i /><span>CLEAN</span><i /><span>TRANSFORM</span><i /><span>MIGRATE</span></div><small className="visual-stamp">UOM / PLANT / SLOC / VALUATION</small></div>,
+    itsm: <div className="project-visual itsm-visual" role="img" aria-label="Mary Grace ITSM project visualization"><div className="ticket-shell"><small>TICKET LIFECYCLE / 001</small><div className="ticket-flow"><span>NEW</span><i /><span>ASSIGNED</span><i /><span>IN PROGRESS</span><i /><span>RESOLVED</span></div><div className="ticket-meta"><b>SLA</b><b>PRIORITY</b><b>ASSIGNEE</b><b>STATUS</b></div></div></div>,
   };
   return <main id="top">
     <Navigation />
