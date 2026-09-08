@@ -1,6 +1,6 @@
 "use client";
 
-import { Check, Clipboard, Command, Copy, ExternalLink, GitBranch, Play, Search, X } from "lucide-react";
+import { ArrowDown, Check, Clipboard, Command, Copy, ExternalLink, GitBranch, Play, Search, X } from "lucide-react";
 import { FormEvent, useEffect, useMemo, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -356,7 +356,8 @@ export function GithubActivity() {
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
-    fetch("https://api.github.com/users/yel-x/repos?sort=updated&per_page=5")
+    // Fetches all public repositories (up to 100) sorted by recent update
+    fetch("https://api.github.com/users/yel-x/repos?sort=updated&per_page=100")
       .then((response) => response.ok ? response.json() : [])
       .then((data) => setRepos(data))
       .catch(() => setRepos([]))
@@ -372,9 +373,10 @@ export function GithubActivity() {
       </div>
       <div className="github-repos">
         {(loaded && repos.length ? repos : [
+          { name: "ariel-nazareno-portfolio", html_url: "https://github.com/yel-x/ariel-nazareno-portfolio", updated_at: "", description: "Personal portfolio website", language: "TypeScript" },
+          { name: "mary-grace-itsm", html_url: "https://github.com/yel-x/mary-grace-itsm", updated_at: "", description: "Ticketing system exercise", language: "TypeScript" },
           { name: "sap-masterdata-pro", html_url: "https://github.com/yel-x/sap-masterdata-pro", updated_at: "", description: "SAP master data mapping workflows", language: "Python" },
-          { name: "sap-masterdata", html_url: "https://github.com/yel-x/sap-masterdata", updated_at: "", description: "Material master data tools", language: "Python" },
-          { name: "mary-grace-itsm", html_url: "https://github.com/yel-x/mary-grace-itsm", updated_at: "", description: "Ticketing system exercise", language: "TypeScript" }
+          { name: "sap-masterdata", html_url: "https://github.com/yel-x/sap-masterdata", updated_at: "", description: "Material master data tools", language: "Python" }
         ]).map((repo) => (
           <a href={repo.html_url} target="_blank" rel="noreferrer" key={repo.name}>
             <span>{repo.name}</span>
@@ -401,10 +403,16 @@ export function TechnicalArchitecture() {
       <div className="section-label">10 / TECHNICAL ARCHITECTURE</div>
       <div className="architecture-flow">
         {layers.map((layer, index) => (
-          <div className="architecture-layer" key={layer[0]}>
-            <strong>{layer[0]}</strong>
-            <div>{layer.slice(1).map((item) => <span key={item}>{item}</span>)}</div>
-            {index < layers.length - 1 && <i aria-hidden="true">↓</i>}
+          <div key={layer[0]}>
+            <div className="architecture-layer">
+              <strong>{layer[0]}</strong>
+              <div>{layer.slice(1).map((item) => <span key={item}>{item}</span>)}</div>
+            </div>
+            {index < layers.length - 1 && (
+              <div className="architecture-connector" aria-hidden="true">
+                <ArrowDown size={14} />
+              </div>
+            )}
           </div>
         ))}
       </div>
