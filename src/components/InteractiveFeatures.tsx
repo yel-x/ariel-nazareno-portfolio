@@ -357,7 +357,7 @@ export function GithubActivity() {
 
   useEffect(() => {
     // Correct API call fetching ALL public repos sorted by updated date (100 limit max)
-    fetch("https://api.github.com/users/yel-x/repos?sort=updated&per_page=100")
+    fetch("https://api.github.com/users/yel-x/repos?type=all&sort=updated&per_page=100")
       .then((response) => response.ok ? response.json() : [])
       .then((data) => {
         if (Array.isArray(data)) {
