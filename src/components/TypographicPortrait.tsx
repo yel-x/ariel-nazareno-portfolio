@@ -25,7 +25,7 @@ export function TypographicPortrait() {
       </div>
       <div className="portrait-hud-bottom">
         <span>ACCESS: GRANTED</span>
-        <span>IMG / MYID / 001</span>
+        <span>STATUS: VERIFIED ✓</span>
       </div>
       <span className="portrait-tag tag-one">SAP / 01</span>
       <span className="portrait-tag tag-two">DATA / 02</span>

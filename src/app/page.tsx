@@ -12,22 +12,12 @@ import { achievements, capabilities, experience, projects, skillGroups } from "@
 // Strictly Typed Variants para sa Framer Motion
 const reveal: Variants = {
   hidden: { opacity: 0, y: 18 },
-  show: { 
-    opacity: 1, 
-    y: 0, 
-    transition: { 
-      duration: 0.5, 
-      ease: [0.16, 1, 0.3, 1] 
-    } 
-  }
+  show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.16, 1, 0.3, 1] } }
 };
 
 const staggerContainer: Variants = {
   hidden: { opacity: 0 },
-  show: {
-    opacity: 1,
-    transition: { staggerChildren: 0.08, delayChildren: 0.05 }
-  }
+  show: { opacity: 1, transition: { staggerChildren: 0.08, delayChildren: 0.05 } }
 };
 
 const modalVariants: Variants = {
@@ -40,9 +30,11 @@ const icons = [<ShieldCheck key="a" />, <Wrench key="b" />, <Braces key="c" />, 
 
 export default function Home() {
   const [activeCaseStudy, setActiveCaseStudy] = useState<(typeof projects)[number] | null>(null);
+  const [loadingCaseStudy, setLoadingCaseStudy] = useState<string | null>(null);
   const [booting, setBooting] = useState(true);
   const [bootProgress, setBootProgress] = useState(0);
   const [showTerminal, setShowTerminal] = useState(false);
+  const [eventLog, setEventLog] = useState("[SYSTEM READY] - SESSION ACTIVE");
 
   // Fast 500ms System Boot Sequence
   useEffect(() => {
@@ -58,6 +50,16 @@ export default function Home() {
     }, 100);
     return () => clearInterval(timer);
   }, []);
+
+  function handleOpenCaseStudy(project: (typeof projects)[number]) {
+    setEventLog(`[13:24:31] REQUEST: OPEN ${project.title}`);
+    setLoadingCaseStudy(project.title);
+    setTimeout(() => {
+      setLoadingCaseStudy(null);
+      setActiveCaseStudy(project);
+      setEventLog(`[13:24:32] ${project.title} MODULE ONLINE`);
+    }, 350);
+  }
 
   const projectVisuals = {
     mapper: (
@@ -142,6 +144,19 @@ export default function Home() {
         {showTerminal && <TerminalConsoleModal onClose={() => setShowTerminal(false)} />}
       </AnimatePresence>
 
+      {/* SAP/Fiori Command Response Loader */}
+      <AnimatePresence>
+        {loadingCaseStudy && (
+          <div className="terminal-modal-backdrop">
+            <div className="terminal-modal" style={{ height: "auto", padding: "20px" }}>
+              <div>&gt; OPEN MODULE: {loadingCaseStudy}</div>
+              <div>LOADING PIPELINE... ████████████████ 100%</div>
+              <div style={{ color: "#8fd1ae" }}>MODULE LOADED ✓</div>
+            </div>
+          </div>
+        )}
+      </AnimatePresence>
+
       {/* Hero Section */}
       <section className="hero page-section">
         <motion.div className="hero-copy" initial="hidden" animate="show" variants={staggerContainer}>
@@ -166,6 +181,21 @@ export default function Home() {
               DOWNLOAD RESUME <Download size={16} />
             </a>
           </motion.div>
+
+          {/* Interactive Data Packet Animation Component */}
+          <div className="data-packet-stream">
+            <div>DATA_PIPELINE_STREAM / ACTIVE</div>
+            <div className="packet-node-row">
+              <span className="packet-node">EXCEL</span>
+              <div className="packet-line"><i className="packet-dot" /></div>
+              <span className="packet-node">VALIDATE</span>
+              <div className="packet-line"><i className="packet-dot" /></div>
+              <span className="packet-node">TRANSFORM</span>
+              <div className="packet-line"><i className="packet-dot" /></div>
+              <span className="packet-node">SAP OUTPUT</span>
+            </div>
+          </div>
+
           <motion.div variants={reveal} className="hero-meta">
             <span>SAP</span>
             <span>ERP</span>
@@ -182,7 +212,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Signal Strip */}
+      {/* Signal Strip with Breathing Pulse Animation */}
       <section className="signal-strip">
         <div><span className="live-dot" /> SYSTEM / PROFILE</div>
         <div>SAP S/4HANA <b>ACTIVE</b></div>
@@ -220,7 +250,7 @@ export default function Home() {
         </motion.div>
       </section>
 
-      {/* Work / Selected Work Section */}
+      {/* Selected Work Section */}
       <section id="work" className="work page-section">
         <div className="section-heading">
           <div className="section-label"><Network size={14} /> 04 / SELECTED WORK</div>
@@ -252,7 +282,7 @@ export default function Home() {
 
                 <div className="project-footer">
                   <span className="project-action">
-                    <button className="text-link case-study-button" onClick={() => setActiveCaseStudy(project)}>
+                    <button className="text-link case-study-button" onClick={() => handleOpenCaseStudy(project)}>
                       View Case Study <BarChart3 size={14} />
                     </button>
                     {project.href && (
@@ -274,7 +304,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Case Study Modal with AnimatePresence */}
+      {/* Case Study Modal */}
       <AnimatePresence>
         {activeCaseStudy?.caseStudy && (
           <motion.div className="case-study-backdrop" role="presentation" onClick={() => setActiveCaseStudy(null)} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
@@ -414,6 +444,12 @@ export default function Home() {
       </section>
 
       <GithubActivity />
+
+      {/* ERP Event Log Floating Banner */}
+      <div className="erp-event-log">
+        <div>ERP_EVENT_LOG: <span>{eventLog}</span></div>
+        <div>STATUS: ACTIVE</div>
+      </div>
 
       <footer className="footer">
         <div>

@@ -251,6 +251,7 @@ export function ItsmPrototype() {
   );
 }
 
+// Interactive Terminal Mode Component
 export function TerminalConsoleModal({ onClose }: { onClose: () => void }) {
   const [history, setHexHistory] = useState<string[]>([
     "ARIEL.OS [Version 2026.09]",
