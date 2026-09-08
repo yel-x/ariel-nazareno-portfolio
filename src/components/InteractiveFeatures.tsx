@@ -356,12 +356,11 @@ export function GithubActivity() {
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
-    // Fetches all public repositories without pagination limits
-    fetch("https://api.github.com/users/yel-x/repos?sort=updated&per_page=100")
+    // Fetches all public and forked repositories directly via GitHub API (all 12 items)
+    fetch("https://api.github.com/users/yel-x/repos?type=all&sort=updated&per_page=100")
       .then((response) => response.ok ? response.json() : [])
       .then((data) => {
         if (Array.isArray(data)) {
-          // Syncs and displays all valid public repositories
           setRepos(data);
         }
       })
