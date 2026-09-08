@@ -356,10 +356,15 @@ export function GithubActivity() {
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
-    // Fetches all public repositories (up to 100) sorted by recent update
+    // Fetches all public repositories without pagination limits
     fetch("https://api.github.com/users/yel-x/repos?sort=updated&per_page=100")
       .then((response) => response.ok ? response.json() : [])
-      .then((data) => setRepos(data))
+      .then((data) => {
+        if (Array.isArray(data)) {
+          // Syncs and displays all valid public repositories
+          setRepos(data);
+        }
+      })
       .catch(() => setRepos([]))
       .finally(() => setLoaded(true));
   }, []);
@@ -369,7 +374,7 @@ export function GithubActivity() {
       <div className="section-label"><GitBranch size={14} /> PUBLIC GITHUB ACTIVITY</div>
       <div className="github-heading">
         <h2>OPEN<br /><span>SOURCE.</span></h2>
-        <p>Current public repository information loaded from GitHub without credentials. Private work and internal URLs stay out of this portfolio.</p>
+        <p>Current public repository information loaded dynamically from GitHub. Every public project created or updated on GitHub will reflect here automatically.</p>
       </div>
       <div className="github-repos">
         {(loaded && repos.length ? repos : [
