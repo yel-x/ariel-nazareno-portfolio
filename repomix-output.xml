@@ -1,0 +1,616 @@
+This file is a merged representation of the entire codebase, combined into a single document by Repomix.
+
+<file_summary>
+This section contains a summary of this file.
+
+<purpose>
+This file contains a packed representation of the entire repository's contents.
+It is designed to be easily consumable by AI systems for analysis, code review,
+or other automated processes.
+</purpose>
+
+<file_format>
+The content is organized as follows:
+1. This summary section
+2. Repository information
+3. Directory structure
+4. Repository files (if enabled)
+5. Multiple file entries, each consisting of:
+  - File path as an attribute
+  - Full contents of the file
+</file_format>
+
+<usage_guidelines>
+- This file should be treated as read-only. Any changes should be made to the
+  original repository files, not this packed version.
+- When processing this file, use the file path to distinguish
+  between different files in the repository.
+- Be aware that this file may contain sensitive information. Handle it with
+  the same level of security as you would the original repository.
+</usage_guidelines>
+
+<notes>
+- Some files may have been excluded based on .gitignore rules and Repomix's configuration
+- Binary files are not included in this packed representation. Please refer to the Repository Structure section for a complete list of file paths, including binary files
+- Files matching patterns in .gitignore are excluded
+- Files matching default ignore patterns are excluded
+- Files are sorted by Git change count (files with more changes are at the bottom)
+</notes>
+
+</file_summary>
+
+<directory_structure>
+public/
+  dashboard.png
+  file.svg
+  globe.svg
+  myID.jpg
+  next.svg
+  resume.pdf
+  vercel.svg
+  window.svg
+src/
+  app/
+    favicon.ico
+    globals.css
+    layout.tsx
+    opengraph-image.tsx
+    page.tsx
+  components/
+    InteractiveFeatures.tsx
+    Navigation.tsx
+    TypographicPortrait.tsx
+  data/
+    portfolio.ts
+.gitignore
+AGENTS.md
+CLAUDE.md
+eslint.config.mjs
+next.config.ts
+package.json
+postcss.config.mjs
+README.md
+tsconfig.json
+</directory_structure>
+
+<files>
+This section contains the contents of the repository's files.
+
+<file path="public/file.svg">
+<svg fill="none" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M14.5 13.5V5.41a1 1 0 0 0-.3-.7L9.8.29A1 1 0 0 0 9.08 0H1.5v13.5A2.5 2.5 0 0 0 4 16h8a2.5 2.5 0 0 0 2.5-2.5m-1.5 0v-7H8v-5H3v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1M9.5 5V2.12L12.38 5zM5.13 5h-.62v1.25h2.12V5zm-.62 3h7.12v1.25H4.5zm.62 3h-.62v1.25h7.12V11z" clip-rule="evenodd" fill="#666" fill-rule="evenodd"/></svg>
+</file>
+
+<file path="public/globe.svg">
+<svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><g clip-path="url(#a)"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.27 14.1a6.5 6.5 0 0 0 3.67-3.45q-1.24.21-2.7.34-.31 1.83-.97 3.1M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m.48-1.52a7 7 0 0 1-.96 0H7.5a4 4 0 0 1-.84-1.32q-.38-.89-.63-2.08a40 40 0 0 0 3.92 0q-.25 1.2-.63 2.08a4 4 0 0 1-.84 1.31zm2.94-4.76q1.66-.15 2.95-.43a7 7 0 0 0 0-2.58q-1.3-.27-2.95-.43a18 18 0 0 1 0 3.44m-1.27-3.54a17 17 0 0 1 0 3.64 39 39 0 0 1-4.3 0 17 17 0 0 1 0-3.64 39 39 0 0 1 4.3 0m1.1-1.17q1.45.13 2.69.34a6.5 6.5 0 0 0-3.67-3.44q.65 1.26.98 3.1M8.48 1.5l.01.02q.41.37.84 1.31.38.89.63 2.08a40 40 0 0 0-3.92 0q.25-1.2.63-2.08a4 4 0 0 1 .85-1.32 7 7 0 0 1 .96 0m-2.75.4a6.5 6.5 0 0 0-3.67 3.44 29 29 0 0 1 2.7-.34q.31-1.83.97-3.1M4.58 6.28q-1.66.16-2.95.43a7 7 0 0 0 0 2.58q1.3.27 2.95.43a18 18 0 0 1 0-3.44m.17 4.71q-1.45-.12-2.69-.34a6.5 6.5 0 0 0 3.67 3.44q-.65-1.27-.98-3.1" fill="#666"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h16v16H0z"/></clipPath></defs></svg>
+</file>
+
+<file path="public/next.svg">
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 394 80"><path fill="#000" d="M262 0h68.5v12.7h-27.2v66.6h-13.6V12.7H262V0ZM149 0v12.7H94v20.4h44.3v12.6H94v21h55v12.6H80.5V0h68.7zm34.3 0h-17.8l63.8 79.4h17.9l-32-39.7 32-39.6h-17.9l-23 28.6-23-28.6zm18.3 56.7-9-11-27.1 33.7h17.8l18.3-22.7z"/><path fill="#000" d="M81 79.3 17 0H0v79.3h13.6V17l50.2 62.3H81Zm252.6-.4c-1 0-1.8-.4-2.5-1s-1.1-1.6-1.1-2.6.3-1.8 1-2.5 1.6-1 2.6-1 1.8.3 2.5 1a3.4 3.4 0 0 1 .6 4.3 3.7 3.7 0 0 1-3 1.8zm23.2-33.5h6v23.3c0 2.1-.4 4-1.3 5.5a9.1 9.1 0 0 1-3.8 3.5c-1.6.8-3.5 1.3-5.7 1.3-2 0-3.7-.4-5.3-1s-2.8-1.8-3.7-3.2c-.9-1.3-1.4-3-1.4-5h6c.1.8.3 1.6.7 2.2s1 1.2 1.6 1.5c.7.4 1.5.5 2.4.5 1 0 1.8-.2 2.4-.6a4 4 0 0 0 1.6-1.8c.3-.8.5-1.8.5-3V45.5zm30.9 9.1a4.4 4.4 0 0 0-2-3.3 7.5 7.5 0 0 0-4.3-1.1c-1.3 0-2.4.2-3.3.5-.9.4-1.6 1-2 1.6a3.5 3.5 0 0 0-.3 4c.3.5.7.9 1.3 1.2l1.8 1 2 .5 3.2.8c1.3.3 2.5.7 3.7 1.2a13 13 0 0 1 3.2 1.8 8.1 8.1 0 0 1 3 6.5c0 2-.5 3.7-1.5 5.1a10 10 0 0 1-4.4 3.5c-1.8.8-4.1 1.2-6.8 1.2-2.6 0-4.9-.4-6.8-1.2-2-.8-3.4-2-4.5-3.5a10 10 0 0 1-1.7-5.6h6a5 5 0 0 0 3.5 4.6c1 .4 2.2.6 3.4.6 1.3 0 2.5-.2 3.5-.6 1-.4 1.8-1 2.4-1.7a4 4 0 0 0 .8-2.4c0-.9-.2-1.6-.7-2.2a11 11 0 0 0-2.1-1.4l-3.2-1-3.8-1c-2.8-.7-5-1.7-6.6-3.2a7.2 7.2 0 0 1-2.4-5.7 8 8 0 0 1 1.7-5 10 10 0 0 1 4.3-3.5c2-.8 4-1.2 6.4-1.2 2.3 0 4.4.4 6.2 1.2 1.8.8 3.2 2 4.3 3.4 1 1.4 1.5 3 1.5 5h-5.8z"/></svg>
+</file>
+
+<file path="public/vercel.svg">
+<svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1155 1000"><path d="m577.3 0 577.4 1000H0z" fill="#fff"/></svg>
+</file>
+
+<file path="public/window.svg">
+<svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" clip-rule="evenodd" d="M1.5 2.5h13v10a1 1 0 0 1-1 1h-11a1 1 0 0 1-1-1zM0 1h16v11.5a2.5 2.5 0 0 1-2.5 2.5h-11A2.5 2.5 0 0 1 0 12.5zm3.75 4.5a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5M7 4.75a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0m1.75.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5" fill="#666"/></svg>
+</file>
+
+<file path="src/app/opengraph-image.tsx">
+import { ImageResponse } from "next/og";
+
+export const alt = "Ariel Nazareno - ERP / SAP Technical Support Specialist";
+export const size = { width: 1200, height: 630 };
+export const contentType = "image/png";
+
+export default function OpenGraphImage() {
+  return new ImageResponse(
+    <div style={{ width: "100%", height: "100%", display: "flex", flexDirection: "column", justifyContent: "space-between", padding: "68px", background: "#080b10", color: "#e9f0f7", fontFamily: "sans-serif" }}>
+      <div style={{ display: "flex", color: "#7bb7ff", fontSize: 24, letterSpacing: 5 }}>AN / BUILT FROM SYSTEMS</div>
+      <div style={{ display: "flex", flexDirection: "column" }}>
+        <div style={{ display: "flex", fontSize: 70, fontWeight: 700, letterSpacing: -3 }}>ARIEL NAZARENO</div>
+        <div style={{ display: "flex", marginTop: 16, color: "#7bb7ff", fontSize: 30, letterSpacing: 4 }}>ERP / SAP</div>
+        <div style={{ display: "flex", fontSize: 38, letterSpacing: 2 }}>TECHNICAL SUPPORT SPECIALIST</div>
+      </div>
+      <div style={{ display: "flex", color: "#9cadbc", fontSize: 22, letterSpacing: 4 }}>SAP  /  ERP  /  AUTOMATION  /  DATA</div>
+    </div>,
+    { ...size },
+  );
+}
+</file>
+
+<file path="src/components/Navigation.tsx">
+"use client";
+import { Menu, X } from "lucide-react";
+import { useState } from "react";
+
+const links = [["WORK", "work"], ["EXPERIENCE", "experience"], ["ABOUT", "about"], ["RESUME", "resume"], ["CONTACT", "contact"]];
+
+export function Navigation() {
+  const [open, setOpen] = useState(false);
+  return <header className="site-nav"><a href="#top" className="brand" aria-label="Ariel Nazareno home"><span>AN</span><strong>ARIEL NAZARENO</strong></a><button className="menu-toggle" onClick={() => setOpen(!open)} aria-label={open ? "Close navigation" : "Open navigation"} aria-expanded={open}>{open ? <X size={20} /> : <Menu size={20} />}</button><nav className={open ? "nav-links open" : "nav-links"}>{links.map(([label, id]) => <a key={id} href={`#${id}`} onClick={() => setOpen(false)}>{label}</a>)}</nav></header>;
+}
+</file>
+
+<file path=".gitignore">
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# env files (can opt-in for committing if needed)
+.env*
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+</file>
+
+<file path="AGENTS.md">
+<!-- BEGIN:nextjs-agent-rules -->
+
+# This is NOT the Next.js you know
+
+This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` (resolved from this file's directory; in monorepos the `next` package may not be visible from the repo root) before writing any code. Heed deprecation notices.
+
+This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
+
+<!-- END:nextjs-agent-rules -->
+</file>
+
+<file path="CLAUDE.md">
+@AGENTS.md
+</file>
+
+<file path="eslint.config.mjs">
+import { defineConfig, globalIgnores } from "eslint/config";
+import nextVitals from "eslint-config-next/core-web-vitals";
+import nextTs from "eslint-config-next/typescript";
+
+const eslintConfig = defineConfig([
+  ...nextVitals,
+  ...nextTs,
+  // Override default ignores of eslint-config-next.
+  globalIgnores([
+    // Default ignores of eslint-config-next:
+    ".next/**",
+    "out/**",
+    "build/**",
+    "next-env.d.ts",
+  ]),
+]);
+
+export default eslintConfig;
+</file>
+
+<file path="next.config.ts">
+import type { NextConfig } from "next";
+
+const nextConfig: NextConfig = {
+  /* config options here */
+};
+
+export default nextConfig;
+</file>
+
+<file path="package.json">
+{
+  "name": "ariel-nazareno-portfolio",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "framer-motion": "^13.2.0",
+    "lucide-react": "^1.41.0",
+    "next": "16.3.4",
+    "react": "19.2.8",
+    "react-dom": "19.2.8"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.3.4",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}
+</file>
+
+<file path="postcss.config.mjs">
+const config = {
+  plugins: {
+    "@tailwindcss/postcss": {},
+  },
+};
+
+export default config;
+</file>
+
+<file path="README.md">
+# Ariel Nazareno Portfolio
+
+Personal portfolio for Ariel Nazareno, an ERP / SAP Technical Support Specialist. The visual direction is **Built From Systems**: the hero portrait is rendered as a canvas made from SAP, ERP, automation, support, and data vocabulary.
+
+## Run locally
+
+```bash
+npm install
+npm run dev
+```
+
+Open `http://localhost:3000`.
+
+## Assets
+
+Add the supplied portrait at `public/myID.jpg` and the verified resume at `public/resume.pdf`. The canvas portrait analyzes the image luminance and uses it as the source for the typographic silhouette. Until the photo is present, the component remains a lightweight fallback surface.
+
+## Update content
+
+Portfolio content lives in `src/data/portfolio.ts`. Keep professional details verified and use `[ADD ...]` or `[VERIFY]` for information that still needs confirmation. The main page is assembled from reusable components in `src/components/`.
+
+## Stack
+
+Next.js · TypeScript · React · Tailwind CSS · Framer Motion · Lucide React · HTML Canvas
+
+## Production
+
+```bash
+npm run build
+npm run start
+```
+
+The app is ready for a standard Vercel deployment.
+</file>
+
+<file path="tsconfig.json">
+{
+  "compilerOptions": {
+    "target": "ES2017",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "react-jsx",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    ".next/dev/types/**/*.ts",
+    "**/*.mts"
+  ],
+  "exclude": ["node_modules"]
+}
+</file>
+
+<file path="src/app/layout.tsx">
+import type { Metadata } from "next";
+import "./globals.css";
+
+export const metadata: Metadata = {
+  title: "Ariel Nazareno — ERP / SAP Technical Support Specialist",
+  description: "ERP / SAP Technical Support Specialist focused on enterprise systems, automation, master data, technical support, and practical technology solutions.",
+  openGraph: { title: "Ariel Nazareno — ERP / SAP Technical Support Specialist", description: "Enterprise systems, automation, master data, and practical technology solutions.", type: "website", images: [{ url: "/opengraph-image" }] },
+  twitter: { card: "summary_large_image", title: "Ariel Nazareno — ERP / SAP Technical Support Specialist", description: "Enterprise systems, automation, master data, and practical technology solutions.", images: ["/opengraph-image"] },
+};
+
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+  const personJsonLd = { "@context": "https://schema.org", "@type": "Person", name: "Ariel Nazareno", jobTitle: "ERP / SAP Technical Support Specialist", email: "nazarenoariel02@gmail.com", sameAs: ["https://www.linkedin.com/in/ariel-nazareno/", "https://github.com/yel-x"] };
+  return <html lang="en"><body>{children}<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }} /></body></html>;
+}
+</file>
+
+<file path="src/components/InteractiveFeatures.tsx">
+"use client";
+
+import { Check, Clipboard, Command, Copy, ExternalLink, GitBranch, Play, Search, X } from "lucide-react";
+import { FormEvent, useEffect, useMemo, useState } from "react";
+
+const codeSample = `material_data = validate_master_data(raw_data)\nmapped_data = map_plant_sloc(material_data)\nsap_output = build_sap_output(mapped_data)`;
+
+export function MasterDataPlayground() {
+  const modules = ["PLANT MAPPER", "SLOC MAPPER", "BASE UOM MAPPER", "MIGRATE MAPPER"] as const;
+  const [module, setModule] = useState<(typeof modules)[number]>("PLANT MAPPER");
+  const [values, setValues] = useState({ material: "100001", plant: "01CA", sloc: "C001" });
+  const [running, setRunning] = useState(false);
+  const [complete, setComplete] = useState(false);
+  const [copied, setCopied] = useState(false);
+
+  function runMapping() {
+    setRunning(true);
+    setComplete(false);
+    window.setTimeout(() => { setRunning(false); setComplete(true); }, 950);
+  }
+
+  async function copyCode() {
+    await navigator.clipboard?.writeText(codeSample);
+    setCopied(true);
+    window.setTimeout(() => setCopied(false), 1400);
+  }
+
+  const moduleOutput = { "PLANT MAPPER": ["PRODUCT", values.material, "EXISTING PLANT", values.plant, "MISSING PLANTS IDENTIFIED"], "SLOC MAPPER": ["PLANT", values.plant, "SLOC", values.sloc, "OUTPUT READY"], "BASE UOM MAPPER": ["MATERIAL", values.material, "BASE UOM", "EA", "VALIDATION PASSED"], "MIGRATE MAPPER": ["PRODUCT DATA", "MAPPING", "TEMPLATE GENERATION", "MIGRATION PACKAGE", "OUTPUT READY"] }[module];
+  return <div className="feature-demo mapper-demo">
+    <div className="demo-heading"><div><span className="demo-kicker">PORTFOLIO DEMO / SAMPLE DATA</span><h3>MASTER DATA MAPPING PLAYGROUND</h3></div><span className="demo-status">NO SAP CONNECTION</span></div>
+    <div className="mapper-workbench">
+      <div className="mapper-inputs">
+        <label>MODULE<select value={module} onChange={(event) => { setModule(event.target.value as (typeof modules)[number]); setComplete(false); }} >{modules.map((option) => <option key={option}>{option}</option>)}</select></label>
+        {(["material", "plant", "sloc"] as const).map((field) => <label key={field}>{field === "sloc" ? "STORAGE LOCATION" : field.toUpperCase()}<input value={values[field]} onChange={(event) => { setValues({ ...values, [field]: event.target.value }); setComplete(false); }} /></label>)}
+        <button className="demo-button" type="button" onClick={runMapping} disabled={running}><Play size={13} /> {running ? "RUNNING..." : "RUN MAPPING"}</button>
+      </div>
+      <div className="mapper-pipeline" aria-live="polite">
+        {(["RAW DATA", "MAPPING RULES", "VALIDATION", "TRANSFORMATION", "SAP OUTPUT"] as const).map((step, index) => <div className={`pipeline-step ${running && index === 2 ? "active" : complete && index === 4 ? "complete" : ""}`} key={step}><span>{String(index + 1).padStart(2, "0")}</span><b>{step}</b>{index < 4 && <i />}</div>)}
+        <div className={`mapping-result ${complete ? "visible" : ""}`}><Check size={15} /> {moduleOutput[4]} <span>{moduleOutput[0]}: {moduleOutput[1]} / {moduleOutput[2]}: {moduleOutput[3]} / STATUS: READY</span></div>
+      </div>
+    </div>
+    <div className="code-viewer"><div className="code-header"><span>representative_mapping.py</span><button type="button" onClick={copyCode}>{copied ? <Check size={13} /> : <Copy size={13} />} {copied ? "COPIED" : "COPY"}</button></div><pre><code>{codeSample}</code></pre></div>
+  </div>;
+}
+
+type Ticket = { week: string; assignee: string; status: string; priority: string; department: string; sla: boolean };
+const tickets: Ticket[] = [
+  { week: "WEEK 01", assignee: "A. Santos", status: "Resolved", priority: "High", department: "SAP", sla: true },
+  { week: "WEEK 01", assignee: "M. Cruz", status: "In Progress", priority: "Medium", department: "Access", sla: true },
+  { week: "WEEK 02", assignee: "J. Reyes", status: "Resolved", priority: "Critical", department: "SAP", sla: false },
+  { week: "WEEK 02", assignee: "A. Santos", status: "Open", priority: "Low", department: "Data", sla: true },
+  { week: "WEEK 03", assignee: "M. Cruz", status: "Resolved", priority: "High", department: "ERP", sla: true },
+  { week: "WEEK 03", assignee: "J. Reyes", status: "On Hold", priority: "Medium", department: "Access", sla: false },
+  { week: "WEEK 04", assignee: "A. Santos", status: "Resolved", priority: "Critical", department: "ERP", sla: true },
+  { week: "WEEK 04", assignee: "M. Cruz", status: "In Progress", priority: "High", department: "Data", sla: true },
+];
+
+export function TaskDashboardDemo() {
+  const [filters, setFilters] = useState({ week: "ALL", assignee: "ALL", status: "ALL", priority: "ALL" });
+  const filtered = useMemo(() => tickets.filter((ticket) => Object.entries(filters).every(([key, value]) => value === "ALL" || ticket[key as keyof Ticket] === value)), [filters]);
+  const resolved = filtered.filter((ticket) => ticket.status === "Resolved").length;
+  const sla = filtered.length ? Math.round((filtered.filter((ticket) => ticket.sla).length / filtered.length) * 100) : 0;
+  const statuses = ["Resolved", "In Progress", "Open", "On Hold"];
+  const priorities = ["Critical", "High", "Medium", "Low"];
+  return <div className="feature-demo dashboard-demo">
+    <div className="demo-heading"><div><span className="demo-kicker">PORTFOLIO DEMO / SAMPLE DATA / INTERNAL PROJECT CONCEPT</span><h3>ERP TASK MONITORING DASHBOARD</h3></div><span className="demo-status">SANITIZED VIEW</span></div>
+    <div className="dashboard-filters">{Object.entries(filters).map(([key, value]) => <label key={key}>{key.toUpperCase()}<select value={value} onChange={(event) => setFilters({ ...filters, [key]: event.target.value })}><option>ALL</option>{[...new Set(tickets.map((ticket) => ticket[key as keyof Ticket] as string))].map((option) => <option key={option}>{option}</option>)}</select></label>)}</div>
+    <div className="kpi-grid"><Metric label="TOTAL TICKETS" value={filtered.length} /><Metric label="RESOLVED" value={resolved} /><Metric label="OPEN" value={filtered.filter((ticket) => ticket.status === "Open").length} /><Metric label="IN PROGRESS" value={filtered.filter((ticket) => ticket.status === "In Progress").length} /><Metric label="ON HOLD" value={filtered.filter((ticket) => ticket.status === "On Hold").length} /><Metric label="OVERALL SLA" value={`${sla}%`} /></div>
+    <div className="dashboard-panels"><div><div className="panel-label">TICKET STATUS BREAKDOWN</div><div className="bar-list">{statuses.map((status) => <div className="bar-row" key={status}><span>{status}</span><i><b style={{ width: `${filtered.length ? (filtered.filter((ticket) => ticket.status === status).length / filtered.length) * 100 : 0}%` }} /></i><strong>{filtered.filter((ticket) => ticket.status === status).length}</strong></div>)}</div><div className="panel-label dashboard-subpanel">TICKETS BY PRIORITY</div><div className="bar-list">{priorities.map((priority) => <div className="bar-row" key={priority}><span>{priority}</span><i><b style={{ width: `${filtered.length ? (filtered.filter((ticket) => ticket.priority === priority).length / filtered.length) * 100 : 0}%` }} /></i><strong>{filtered.filter((ticket) => ticket.priority === priority).length}</strong></div>)}</div></div><div><div className="panel-label">SAMPLE TICKET STREAM</div><div className="ticket-table">{filtered.slice(0, 5).map((ticket, index) => <div key={`${ticket.week}-${index}`}><span>{ticket.week}</span><b>{ticket.department}</b><span>{ticket.assignee}</span><em className={`status-${ticket.status.toLowerCase().replace(" ", "-")}`}>{ticket.status}</em></div>)}</div><div className="panel-label dashboard-subpanel">ASSIGNEE PERFORMANCE</div><div className="assignee-list">{["A. Santos", "M. Cruz", "J. Reyes"].map((assignee) => <span key={assignee}>{assignee}<b>{filtered.filter((ticket) => ticket.assignee === assignee && ticket.status === "Resolved").length} RESOLVED</b></span>)}</div></div></div>
+  </div>;
+}
+
+function Metric({ label, value }: { label: string; value: string | number }) { return <div className="kpi"><strong>{value}</strong><span>{label}</span></div>; }
+
+type Lifecycle = "NEW" | "ASSIGNED" | "IN PROGRESS" | "RESOLVED";
+export function ItsmPrototype() {
+  const [subject, setSubject] = useState("");
+  const [ticket, setTicket] = useState<{ id: string; subject: string; status: Lifecycle } | null>(null);
+  const [priority, setPriority] = useState("HIGH");
+  const [nextId, setNextId] = useState(1);
+  function createTicket(event: FormEvent<HTMLFormElement>) { event.preventDefault(); if (!subject.trim()) return; setTicket({ id: `MG-${String(nextId).padStart(3, "0")}`, subject: subject.trim(), status: "NEW" }); setNextId(nextId + 1); setSubject(""); }
+  const transition: Record<Lifecycle, { label: string; next?: Lifecycle }> = { NEW: { label: "ASSIGN", next: "ASSIGNED" }, ASSIGNED: { label: "START WORK", next: "IN PROGRESS" }, "IN PROGRESS": { label: "RESOLVE", next: "RESOLVED" }, RESOLVED: { label: "RESOLVED" } };
+  return <div className="feature-demo itsm-demo"><div className="demo-heading"><div><span className="demo-kicker">INTERACTIVE PROTOTYPE / FRONT-END SIMULATION</span><h3>MARY GRACE ITSM</h3></div><span className="demo-status">EXERCISE ONLY</span></div><div className="itsm-grid"><form className="itsm-form" onSubmit={createTicket}><label>SUBJECT<input value={subject} onChange={(event) => setSubject(event.target.value)} placeholder="Describe a fictional issue" /></label><label>CATEGORY<select defaultValue="ERP"><option>ERP</option><option>ACCESS</option><option>DATA</option></select></label><label>PRIORITY<select value={priority} onChange={(event) => setPriority(event.target.value)}><option>HIGH</option><option>MEDIUM</option><option>LOW</option></select></label><label>DESCRIPTION<textarea placeholder="Sample description" rows={3} /></label><button className="demo-button" type="submit"><Play size={13} /> CREATE TICKET</button></form><div className="ticket-card" aria-live="polite">{ticket ? <><span className="demo-kicker">{ticket.id}</span><h4>{ticket.subject}</h4><div className="ticket-facts"><span>STATUS<strong>{ticket.status}</strong></span><span>PRIORITY<strong>{priority}</strong></span><span>ASSIGNEE<strong>{ticket.status === "NEW" ? "UNASSIGNED" : "A. SANTOS"}</strong></span><span>SLA<strong>04:00</strong></span></div><div className="lifecycle">{(["NEW", "ASSIGNED", "IN PROGRESS", "RESOLVED"] as Lifecycle[]).map((status) => <span className={status === ticket.status ? "current" : ""} key={status}>{status}</span>)}</div><button className="demo-button" type="button" disabled={!transition[ticket.status].next} onClick={() => transition[ticket.status].next && setTicket({ ...ticket, status: transition[ticket.status].next as Lifecycle })}>{transition[ticket.status].label}</button></> : <div className="empty-state"><Clipboard size={24} /><span>CREATE A SAMPLE TICKET TO BEGIN</span></div>}</div></div></div>;
+}
+
+const commands = [{ label: "Go to Projects", target: "work" }, { label: "Go to Experience", target: "experience" }, { label: "Go to About", target: "about" }, { label: "Go to Skills", target: "skills" }, { label: "Open Source", target: "open-source" }, { label: "Download Resume", target: "resume", download: true }, { label: "Open GitHub", href: "https://github.com/yel-x" }, { label: "Contact Ariel", target: "contact" }, { label: "SAP Master Data Mapper", target: "mapper-demo" }, { label: "ERP Dashboard", target: "dashboard-demo" }, { label: "SAP Material Data Tools", target: "materials-demo" }, { label: "Mary Grace ITSM", target: "itsm-demo" }];
+export function CommandPalette() {
+  const [open, setOpen] = useState(false);
+  const [query, setQuery] = useState("");
+  const [activeIndex, setActiveIndex] = useState(0);
+  useEffect(() => { const handler = (event: KeyboardEvent) => { if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === "k") { event.preventDefault(); setOpen(true); } if (event.key === "Escape") setOpen(false); }; window.addEventListener("keydown", handler); return () => window.removeEventListener("keydown", handler); }, []);
+  const filtered = commands.filter((command) => command.label.toLowerCase().includes(query.toLowerCase()));
+  useEffect(() => { setActiveIndex(0); }, [query]);
+  function execute(command: typeof commands[number]) { setOpen(false); setQuery(""); if (command.href) window.open(command.href, "_blank", "noopener,noreferrer"); else if (command.download) window.open("/resume.pdf", "_blank"); else if (command.target) document.getElementById(command.target)?.scrollIntoView({ behavior: "smooth" }); }
+  function handlePaletteKey(event: React.KeyboardEvent<HTMLInputElement>) { if (event.key === "ArrowDown") { event.preventDefault(); setActiveIndex((index) => Math.min(index + 1, filtered.length - 1)); } if (event.key === "ArrowUp") { event.preventDefault(); setActiveIndex((index) => Math.max(index - 1, 0)); } if (event.key === "Enter" && filtered[activeIndex]) execute(filtered[activeIndex]); }
+  return <>{<button className="palette-trigger" type="button" onClick={() => setOpen(true)} aria-label="Open command palette"><Command size={14} /> CTRL K</button>}{open && <div className="palette-backdrop" onClick={() => setOpen(false)}><div className="command-palette" role="dialog" aria-modal="true" aria-label="Portfolio command palette" onClick={(event) => event.stopPropagation()}><div className="palette-search"><Search size={16} /><input autoFocus value={query} onKeyDown={handlePaletteKey} onChange={(event) => setQuery(event.target.value)} placeholder="Search portfolio..." /><button type="button" onClick={() => setOpen(false)} aria-label="Close command palette"><X size={16} /></button></div><div className="command-list">{filtered.map((command, index) => <button className={index === activeIndex ? "active" : ""} type="button" key={command.label} onClick={() => execute(command)}>{command.label}<ExternalLink size={13} /></button>)}{!filtered.length && <span className="empty-state">NO COMMANDS FOUND</span>}</div><div className="palette-hint">ESC CLOSE <span>ARROWS NAVIGATE / ENTER SELECT</span></div></div></div>}</>;
+}
+
+export function GithubActivity() {
+  const [repos, setRepos] = useState<{ name: string; html_url: string; updated_at: string; description?: string; language?: string }[]>([]);
+  const [loaded, setLoaded] = useState(false);
+  useEffect(() => { fetch("https://api.github.com/users/yel-x/repos?sort=updated&per_page=5").then((response) => response.ok ? response.json() : []).then((data) => setRepos(data)).catch(() => setRepos([])).finally(() => setLoaded(true)); }, []);
+  return <section id="open-source" className="github-activity page-section" aria-label="Public GitHub activity"><div className="section-label"><GitBranch size={14} /> PUBLIC GITHUB ACTIVITY</div><div className="github-heading"><h2>OPEN<br /><span>SOURCE.</span></h2><p>Current public repository information loaded from GitHub without credentials. Private work and internal URLs stay out of this portfolio.</p></div><div className="github-repos">{(loaded && repos.length ? repos : [{ name: "sap-masterdata-pro", html_url: "https://github.com/yel-x/sap-masterdata-pro", updated_at: "", description: "SAP master data mapping workflows", language: "Python" }, { name: "sap-masterdata", html_url: "https://github.com/yel-x/sap-masterdata", updated_at: "", description: "Material master data tools", language: "Python" }, { name: "mary-grace-itsm", html_url: "https://github.com/yel-x/mary-grace-itsm", updated_at: "", description: "Ticketing system exercise", language: "TypeScript" }]).map((repo) => <a href={repo.html_url} target="_blank" rel="noreferrer" key={repo.name}><span>{repo.name}</span><small>{repo.description || "Public repository"}</small><small>{repo.language || "Language not specified"} {repo.updated_at ? ` / UPDATED ${new Date(repo.updated_at).toLocaleDateString()}` : " / PUBLIC REPOSITORY"}</small><ExternalLink size={13} /></a>)}</div></section>;
+}
+
+export function TechnicalArchitecture() {
+  const layers = [["SAP / ERP", "S/4HANA", "Fiori", "Master Data", "Access / Security"], ["AUTOMATION", "Python", "Pandas", "Excel"], ["WEB", "Next.js", "React", "TypeScript"], ["DATA", "Validation", "Transformation", "Migration"]];
+  return <section className="architecture page-section" aria-label="Technical architecture"><div className="section-label">10 / TECHNICAL ARCHITECTURE</div><div className="architecture-flow">{layers.map((layer, index) => <div className="architecture-layer" key={layer[0]}><strong>{layer[0]}</strong><div>{layer.slice(1).map((item) => <span key={item}>{item}</span>)}</div>{index < layers.length - 1 && <i aria-hidden="true">↓</i>}</div>)}</div></section>;
+}
+
+export function CopyEmail() {
+  const [copied, setCopied] = useState(false);
+
+  async function copy() {
+    if (navigator.clipboard) await navigator.clipboard.writeText("nazarenoariel02@gmail.com");
+    setCopied(true);
+    window.setTimeout(() => setCopied(false), 1400);
+  }
+
+  return <button className="copy-email" type="button" onClick={copy}>{copied ? <Check size={14} /> : <Copy size={14} />} {copied ? "COPIED" : "COPY"}</button>;
+}
+</file>
+
+<file path="src/components/TypographicPortrait.tsx">
+import Image from "next/image";
+
+export function TypographicPortrait() {
+  return <div className="portrait-wrap" aria-label="Portrait of Ariel Nazareno">
+    <div className="portrait-hud-top"><span><i /> SYSTEM READY</span><span>USER: ARIEL</span></div>
+    <div className="portrait-hud-role">ROLE: ERP_SUPPORT</div>
+    <div className="portrait-media">
+      <Image src="/myID.jpg" alt="Portrait of Ariel Nazareno" fill priority sizes="(max-width: 900px) 90vw, 42vw" className="portrait-image" />
+      <div className="portrait-tint" />
+      <div className="portrait-grid" />
+      <div className="portrait-scanlines" />
+      <span className="portrait-crosshair crosshair-top" />
+      <span className="portrait-crosshair crosshair-bottom" />
+    </div>
+    <div className="portrait-hud-bottom"><span>ACCESS: GRANTED</span><span>IMG / MYID / 001</span></div>
+    <span className="portrait-tag tag-one">SAP / 01</span>
+    <span className="portrait-tag tag-two">DATA / 02</span>
+    <span className="portrait-tag tag-three">SUPPORT / 03</span>
+  </div>;
+}
+</file>
+
+<file path="src/data/portfolio.ts">
+export const portraitWords = [
+  "ERP", "SAP", "S/4HANA", "HANA", "SUPPORT", "TECHNICAL", "AUTOMATION", "DATA",
+  "PYTHON", "EXCEL", "SYSTEMS", "SOLUTIONS", "FIORI", "SECURITY", "IAM", "MASTER DATA",
+  "MIGRATION", "VALIDATION", "TROUBLESHOOTING", "CONFIGURATION", "ACCESS", "AUTHORIZATION",
+  "ITSM", "INCIDENT", "PROCESS", "INTEGRATION", "API", "DATABASE", "ROLE MANAGEMENT",
+];
+
+export const capabilities = [
+  { index: "01", title: "SAP / ERP", text: "Enterprise systems, S/4HANA support, master data, role management, and business process context." },
+  { index: "02", title: "TECHNICAL SUPPORT", text: "Ticket handling, incident management, problem analysis, and clear communication across teams." },
+  { index: "03", title: "AUTOMATION", text: "Python, Excel, data processing, APIs, and focused internal tools that remove repetitive work." },
+  { index: "04", title: "DATA", text: "Validation, transformation, migration, UOM workflows, and structured Plant / SLoc data." },
+];
+
+export const projects = [
+  { number: "01", category: "AUTOMATION / SAP / MASTER DATA", title: "SAP MASTER DATA MAPPER", overview: "A master data mapping application designed to support Plant and Storage Location (SLoc) assignment workflows, Base UoM mapping, and migration-related data preparation based on predefined mapping rules and master data requirements.", technologies: ["Python", "Pandas", "Excel", "Data Processing", "SAP Master Data"], status: "PUBLIC PROJECT", href: "https://github.com/yel-x/sap-masterdata-pro", liveDemo: "https://sap-masterdata.vercel.app/", visual: "mapper", caseStudy: { problem: "Master data preparation required repeatable mapping workflows for product, Plant, SLoc, Base UoM, and migration-template output.", solution: "The application organizes four focused workflows: Plant Mapper, Storage Location Mapper, Base UoM Mapper, and Migrate Mapper.", features: ["Existing vs Missing Plants per Product", "Storage Location mapping from Plant records", "Base UoM mapping against a reference table", "M, MARA, MARC, MARD and MBEW template generation"] } },
+  { number: "02", category: "DASHBOARD / REPORTING / ERP SUPPORT", title: "ERP TASK MONITORING DASHBOARD", overview: "A Google Sheets-based ERP support dashboard designed to monitor ticket status, weekly workload, assignee performance, department distribution, ticket priority, active ticket aging, SLA performance, and SAP / APPTech escalation tracking.", technologies: ["Google Sheets", "Google Forms", "Spreadsheet Formulas", "Data Visualization", "Dashboard Design", "ERP Support Reporting"], status: "INTERNAL PROJECT", visual: "dashboard", caseStudy: { problem: "ERP support activities needed a centralized way to monitor ticket volume, workload, status, priorities, aging, assignee performance and SLA performance.", solution: "Designed and implemented a Google Sheets-based ERP support dashboard with filters, calculations, charts and reporting views.", features: ["Weekly ticket monitoring", "Ticket status tracking", "Department analysis", "Assignee performance", "Priority analysis", "Active ticket aging", "SLA monitoring", "SAP / APPTech escalation tracking", "Interactive filtering"] } },
+  { number: "03", category: "SAP / MASTER DATA / DATA PROCESSING", title: "SAP MATERIAL MASTER DATA TOOLS", overview: "A collection of SAP Material Master Data tools designed to support controlled master-data preparation, extension, validation, and export workflows.", technologies: ["Python", "Pandas", "Excel", "SAP Data", "Data Validation", "Data Processing"], status: "CONFIDENTIAL / INTERNAL", href: "https://github.com/yel-x/sap-masterdata", liveDemo: "https://sap-masterdata-pro.vercel.app/", visual: "materials", caseStudy: { problem: "Controlled master-data preparation needs a predictable path from protected access and target scope selection to export.", solution: "The tools follow a defined workflow: Security PIN, target scope, XLSX/CSV upload, column header name, and data export.", features: ["Plant (WERKS) target scope", "Storage Loc (LGORT) target scope", "Valuation Class (BKLAS) target scope", "Unit Conversion (MARM) target scope"] } },
+  { number: "04", category: "ITSM / HELPDESK / WEB APPLICATION", title: "MARY GRACE ITSM", overview: "A helpdesk and ticketing system built from scratch as a technical exercise for the Mary Grace ERP / IT Support environment. It explores ticket creation, assignment, status tracking, ticket management, and basic SLA monitoring.", technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase"], status: "EXERCISE / PROTOTYPE", href: "https://github.com/yel-x/mary-grace-itsm", visual: "itsm", caseStudy: { problem: "A technical exercise needed to explore a focused helpdesk and ticket lifecycle experience.", solution: "A front-end prototype models ticket creation, assignment, status tracking, ticket management, and basic SLA monitoring.", features: ["Ticket creation", "Assignment workflow", "Status tracking", "Ticket management", "Basic SLA monitoring"] } },
+];
+
+export const experience = [
+  { date: "CURRENT", role: "ERP Technical Support Specialist", company: "Mary Grace", detail: "Product, supplier, GL, and cost center master data; SAP S/4HANA Public Edition configuration; access management; data migration; and related SAP support. Participates in SAP integration with MGIOS, SIS, MOS, and POS. Tools include SAP S/4HANA Public Edition and Adobe LiveCycle for PO.", current: true },
+  { date: "MAY 2025 — APRIL 2026", role: "SAP Security Consultant", company: "Cuatrix Consulting Services Company Limited", detail: "SAP Security support, role development, access management, user maintenance, and cross-functional collaboration across S/4HANA implementation work." },
+  { date: "JAN — APR 2025", role: "IT Consultant Intern", company: "Cuatrix Consulting Services Company Limited", detail: "SAP HANA database administration, database role design, access control, privilege allocation, and collaboration around system stability, security, and performance." },
+  { date: "SEP 2021 — NOV 2023", role: "Service Crew", company: "Jollibee Calamba Shopping", detail: "Customer service, order processing, cash transactions, and POS systems in a fast-paced environment.", secondary: true },
+];
+
+export const skillGroups = [
+  ["SAP / ERP", "SAP ERP", "SAP S/4HANA", "SAP HANA", "SAP Fiori", "ERP Support", "Master Data", "Role Management", "Access Management", "Security"],
+  ["AUTOMATION", "Python", "Excel", "Pandas", "Data Processing", "APIs"],
+  ["DATA", "Data Validation", "Data Transformation", "Migration", "UOM", "Plant / SLoc"],
+  ["DEVELOPMENT", "TypeScript", "React", "Next.js", "HTML", "CSS", "Git", "GitHub"],
+];
+
+export const achievements = [
+  "Certified in SAP — internal to Procter & Gamble; structured SAP training in the global SAP environment.",
+  "SAP Access Management Specialist Certification.",
+  "S/4HANA Developers Certification.",
+  "ABAP Developers Certification.",
+  "GeoStars Program Participant — Grab Philippines and City College of Calamba geo-mapping workshop.",
+  "1st Place, Academic Quiz Bee — City College of Calamba.",
+];
+</file>
+
+<file path="src/app/page.tsx">
+"use client";
+
+import { ArrowUpRight, BarChart3, Braces, Database, Download, ExternalLink, FileText, Network, ShieldCheck, TerminalSquare, Wrench, X } from "lucide-react";
+import { motion } from "framer-motion";
+import Image from "next/image";
+import { useState } from "react";
+import { Navigation } from "@/components/Navigation";
+import { TypographicPortrait } from "@/components/TypographicPortrait";
+import { CommandPalette, CopyEmail, GithubActivity, ItsmPrototype, MasterDataPlayground, TaskDashboardDemo, TechnicalArchitecture } from "@/components/InteractiveFeatures";
+import { achievements, capabilities, experience, projects, skillGroups } from "@/data/portfolio";
+
+const reveal = { hidden: { opacity: 0, y: 18 }, show: { opacity: 1, y: 0, transition: { duration: 0.55 } } };
+const icons = [<ShieldCheck key="a" />, <Wrench key="b" />, <Braces key="c" />, <Database key="d" />];
+
+export default function Home() {
+  const [activeCaseStudy, setActiveCaseStudy] = useState<(typeof projects)[number] | null>(null);
+  const projectVisuals = {
+    mapper: <div className="project-visual mapper-visual" role="img" aria-label="Plant Mapper, SLoc Mapper, Base UoM Mapper, and Migrate Mapper workflow"><div className="mapper-flow"><span>PLANT MAPPER</span><i>↓</i><span>SLOC MAPPER</span><i>↓</i><span>BASE UOM MAPPER</span><i>↓</i><span>MIGRATE MAPPER</span></div><small className="visual-stamp">PLANT / SLOC / UOM / MIGRATION</small></div>,
+    dashboard: <div className="project-visual dashboard-visual"><Image src="/dashboard.png" alt="ERP Task Monitoring Dashboard preview showing ticket status, workload, departments, priorities, and SLA reporting" width={1904} height={880} style={{ width: "100%", height: "auto", display: "block" }} /></div>,
+    materials: <div className="project-visual materials-visual" role="img" aria-label="SAP Material Master Data Tools security, scope, upload, preparation, and export workflow"><div className="process-node">SECURITY PIN</div><div className="process-flow"><span>TARGET SCOPE</span><i /><span>UPLOAD</span><i /><span>MAP / PREPARE</span><i /><span>EXPORT</span></div><small className="visual-stamp">PLANT / SLOC / VALUATION / UOM</small></div>,
+    itsm: <div className="project-visual itsm-visual" role="img" aria-label="Mary Grace ITSM project visualization"><div className="ticket-shell"><small>TICKET LIFECYCLE / 001</small><div className="ticket-flow"><span>NEW</span><i /><span>ASSIGNED</span><i /><span>IN PROGRESS</span><i /><span>RESOLVED</span></div><div className="ticket-meta"><b>SLA</b><b>PRIORITY</b><b>ASSIGNEE</b><b>STATUS</b></div></div></div>,
+  };
+  return <main id="top">
+    <Navigation />
+    <CommandPalette />
+    <section className="hero page-section"><div className="hero-copy"><div className="eyebrow"><span className="marker" /> 01 / PROFESSIONAL PROFILE</div><p className="hero-name">ARIEL NAZARENO</p><h1>ERP<br /><em>TECHNICAL</em><br />SUPPORT<br /><span>SPECIALIST</span></h1><p className="hero-lede">I solve ERP problems, automate processes, and build practical technology solutions.</p><div className="hero-actions"><a className="button button-primary" href="#work">VIEW MY WORK <ArrowUpRight size={16} /></a><a className="button button-ghost" href="/resume.pdf" download>DOWNLOAD RESUME <Download size={16} /></a></div><div className="hero-meta"><span>SAP</span><span>ERP</span><span>AUTOMATION</span><span>DATA</span></div></div><div className="hero-art"><TypographicPortrait /><div className="portrait-caption"><span>THE TECHNOLOGY<br />BEHIND THE WORK</span><span>LOCAL / 001</span></div></div></section>
+    <section className="signal-strip"><div><span className="live-dot" /> SYSTEM / PROFILE</div><div>SAP S/4HANA <b>ACTIVE</b></div><div>ERP SUPPORT <b>ACTIVE</b></div><div>AUTOMATION <b>ACTIVE</b></div><div>DATA <b>READY</b></div></section>
+    <motion.section id="about" className="intro page-section" initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.2 }} variants={reveal}><div className="section-label">02 / ABOUT</div><div className="intro-content"><h2>SYSTEMS.<br />PROBLEMS.<br /><span>SOLUTIONS.</span></h2><div><p className="large-copy">An ERP / SAP Technical Support Specialist focused on enterprise systems, technical support, automation, data, and practical solutions for business problems.</p><p className="muted">Where enterprise systems meet practical solutions. This portfolio is an evolving record of the tools, experiences, and thinking behind the work.</p></div></div></motion.section>
+    <section className="capabilities page-section"><div className="section-label">03 / WHAT I DO</div><div className="capability-grid">{capabilities.map((item, index) => <motion.article key={item.index} initial="hidden" whileInView="show" viewport={{ once: true }} variants={{ ...reveal, show: { ...reveal.show, transition: { duration: 0.45, delay: index * 0.07 } } }}><div className="capability-top"><span>{item.index}</span>{icons[index]}</div><h3>{item.title}</h3><p>{item.text}</p></motion.article>)}</div></section>
+    <section id="work" className="work page-section"><div className="section-heading"><div className="section-label"><Network size={14} /> 04 / SELECTED WORK</div><h2>CASE STUDIES<br /><span>IN PROGRESS.</span></h2><p>Practical systems work, represented with sanitized examples and verified outcomes only.</p></div><div className="project-list">{projects.map((project) => <article className="project" key={project.number}><div className="project-index">{project.number}</div><div className="project-main"><div className="project-visual-frame">{projectVisuals[project.visual as keyof typeof projectVisuals]}</div><div className="project-category">{project.category}</div><div className="project-title-row"><h3>{project.title}</h3><span className="project-status">{project.status}</span></div><p className="project-overview">{project.overview}</p><div className="project-tech">{project.technologies.map((technology) => <span key={technology}>{technology}</span>)}</div>{project.visual === "mapper" && <div id="mapper-demo"><MasterDataPlayground /></div>}{project.visual === "dashboard" && <div id="dashboard-demo"><TaskDashboardDemo /></div>}{project.visual === "materials" && <div id="materials-demo" />}{project.visual === "itsm" && <div id="itsm-demo"><ItsmPrototype /></div>}<div className="project-footer"><span className="project-action"><button className="text-link case-study-button" onClick={() => setActiveCaseStudy(project)}>View Case Study <BarChart3 size={14} /></button>{project.href && <a className="text-link" href={project.href} target="_blank" rel="noopener noreferrer">View on GitHub <ExternalLink size={14} /></a>}{project.liveDemo && <a className="text-link" href={project.liveDemo} target="_blank" rel="noopener noreferrer">View Live Demo <ExternalLink size={14} /></a>}</span><span className="project-kind">{project.href ? "PUBLIC REPOSITORY" : "SANITIZED PREVIEW"}</span></div></div></article>)}</div></section>
+    {activeCaseStudy?.caseStudy && <div className="case-study-backdrop" role="presentation" onClick={() => setActiveCaseStudy(null)}><article className="case-study-modal" role="dialog" aria-modal="true" aria-labelledby="case-study-title" onClick={(event) => event.stopPropagation()}><button className="case-study-close" onClick={() => setActiveCaseStudy(null)} aria-label="Close case study"><X size={18} /></button><div className="section-label">{activeCaseStudy.status}</div><h2 id="case-study-title">{activeCaseStudy.title}</h2><div className="case-study-preview">{projectVisuals[activeCaseStudy.visual as keyof typeof projectVisuals]}</div><div className="case-study-copy"><div><b>OVERVIEW</b><p>{activeCaseStudy.overview}</p></div><div><b>PROBLEM</b><p>{activeCaseStudy.caseStudy.problem}</p></div><div><b>SOLUTION</b><p>{activeCaseStudy.caseStudy.solution}</p></div><div><b>WORKFLOW / KEY FEATURES</b><ul>{activeCaseStudy.caseStudy.features.map((feature) => <li key={feature}>{feature}</li>)}</ul></div><div className="case-study-links">{activeCaseStudy.liveDemo && <a className="text-link" href={activeCaseStudy.liveDemo} target="_blank" rel="noopener noreferrer">View Live Demo <ExternalLink size={14} /></a>}{activeCaseStudy.href && <a className="text-link" href={activeCaseStudy.href} target="_blank" rel="noopener noreferrer">View on GitHub <ExternalLink size={14} /></a>}</div></div></article></div>}
+    <section id="experience" className="experience page-section"><div className="section-label">05 / EXPERIENCE</div><div className="timeline-heading"><h2>THE WORK<br /><span>SO FAR.</span></h2><p>Experience presented with the information currently verified. Mary Grace is the current role.</p></div><div className="timeline">{experience.map((item) => <article className={`timeline-item ${item.current ? "current" : ""} ${item.secondary ? "secondary" : ""}`} key={`${item.role}-${item.company}`}><div className="timeline-date">{item.date}</div><div className="timeline-line"><span /></div><div><div className="timeline-role">{item.role}</div><div className="timeline-company">{item.company}</div><p>{item.detail}</p></div></article>)}</div></section>
+    <section id="skills" className="skills page-section"><div className="section-label">06 / SKILLS</div><div className="skills-grid">{skillGroups.map(([title, ...skills]) => <div className="skill-group" key={title}><h3>{title}</h3><div>{skills.map((skill) => <span key={skill}>{skill}</span>)}</div></div>)}</div></section>
+    <section className="achievements page-section"><div className="section-label">07 / ACHIEVEMENTS</div><div className="achievement-layout"><h2>PROOF OF<br /><span>PROGRESS.</span></h2><div className="achievement-list">{achievements.map((achievement, index) => <div key={achievement}><span>0{index + 1}</span><p>{achievement}</p></div>)}</div></div></section>
+    <section id="resume" className="resume page-section"><div className="resume-panel"><div className="section-label">08 / RESUME</div><FileText size={28} strokeWidth={1.2} /><h2>THE FULL<br /><span>PICTURE.</span></h2><p>A concise record of experience, education, competencies, and certifications.</p><div className="resume-actions"><a className="button button-primary" href="/resume.pdf" target="_blank">VIEW FULL RESUME <ExternalLink size={16} /></a><a className="button button-ghost" href="/resume.pdf" download>DOWNLOAD PDF <Download size={16} /></a></div></div></section>
+      <TechnicalArchitecture />
+      <section id="contact" className="contact page-section"><div className="section-label">09 / CONTACT</div><div className="contact-content"><h2>LET&apos;S SOLVE<br /><span>A PROBLEM.</span></h2><p>For opportunities, collaboration, or a conversation about enterprise technology.</p><div className="email-row"><a className="contact-email" href="mailto:nazarenoariel02@gmail.com">nazarenoariel02@gmail.com <ArrowUpRight size={20} /></a><CopyEmail /></div><div className="contact-links"><a href="https://www.linkedin.com/in/ariel-nazareno/" target="_blank" rel="noreferrer">LINKEDIN <ArrowUpRight size={15} /></a><a href="https://github.com/yel-x" target="_blank" rel="noreferrer">GITHUB <ExternalLink size={15} /></a></div></div></section>
+    <GithubActivity />
+    <footer className="footer"><div><strong>ARIEL NAZARENO</strong><span>ERP / SAP TECHNICAL SUPPORT SPECIALIST</span></div><div className="footer-tags">SAP · ERP · AUTOMATION · DATA</div><div className="footer-bottom"><span>BUILT FROM SYSTEMS.</span><span><TerminalSquare size={14} /> SYSTEM READY_</span></div></footer>
+  </main>;
+}
+</file>
+
+<file path="src/app/globals.css">
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+.mapper-flow{display:grid;justify-items:center;gap:6px;padding:12px 0;font:10px 'DM Mono'}.mapper-flow span{position:static!important;padding:8px 10px;border:1px solid rgba(123,183,255,.35);color:#b4d7ff}.mapper-flow i{position:static;width:auto;height:auto;background:none;opacity:.7;color:var(--blue);font-style:normal}.mapper-visual{display:block;padding:22px}.mapper-visual .visual-stamp{bottom:10px}.mapper-inputs select{width:100%;border:1px solid rgba(123,183,255,.22);background:#0a1119;color:var(--text);padding:9px;font:11px 'DM Mono'}.dashboard-subpanel{margin-top:24px}.assignee-list{display:grid;gap:8px;margin-top:14px}.assignee-list span{display:flex;justify-content:space-between;color:#9ab0c1;border-bottom:1px solid var(--line);padding-bottom:8px}.assignee-list b{color:var(--blue);font-weight:400}.command-list button.active{background:rgba(123,183,255,.1);color:var(--blue-bright)}.case-study-links{display:flex;flex-wrap:wrap;gap:14px}.architecture-flow{display:grid;gap:0;max-width:680px;margin:35px auto 0}.architecture-layer{display:grid;grid-template-columns:150px 1fr;align-items:center;gap:20px;position:relative}.architecture-layer strong{color:var(--blue);font:12px 'DM Mono';letter-spacing:.08em}.architecture-layer div{display:flex;flex-wrap:wrap;gap:8px}.architecture-layer span{padding:7px 9px;border:1px solid var(--line);color:#a8bacb;font:10px 'DM Mono'}.architecture-layer i{grid-column:1/-1;margin:8px 0 8px 70px;color:var(--blue);font-style:normal}.github-repos a{grid-template-columns:1fr auto}.github-repos small{grid-column:1}.github-repos svg{grid-column:2;grid-row:1/4}
+:root{--bg:#080b10;--surface:#10161e;--surface2:#131c26;--line:rgba(180,204,230,.14);--muted:#7e8d9d;--text:#e9f0f7;--blue:#7bb7ff;--blue-bright:#b4d7ff}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:'Space Grotesk',sans-serif}a{color:inherit;text-decoration:none}.site-nav{position:fixed;z-index:20;top:0;left:0;right:0;display:flex;align-items:center;justify-content:space-between;height:70px;padding:0 5vw;border-bottom:1px solid var(--line);background:rgba(8,11,16,.84);backdrop-filter:blur(16px)}.brand{display:flex;align-items:center;gap:12px;font-size:11px;letter-spacing:.12em}.brand span{display:grid;place-items:center;width:27px;height:27px;border:1px solid var(--blue);color:var(--blue);font:500 10px 'DM Mono'}.brand strong{font-weight:500}.nav-links{display:flex;gap:28px;color:#99a8b8;font:11px 'DM Mono';letter-spacing:.08em}.nav-links a{transition:color .2s}.nav-links a:hover{color:var(--blue)}.menu-toggle{display:none;border:0;background:transparent;color:var(--text)}.page-section{padding:130px 9vw;border-bottom:1px solid var(--line)}.hero{min-height:800px;padding-top:160px;display:grid;grid-template-columns:1fr 1fr;gap:7vw;align-items:center}.eyebrow,.section-label,.project-category,.timeline-date,.hero-meta,.portrait-caption,.signal-strip,.footer,.footer-bottom{font:11px 'DM Mono';letter-spacing:.08em}.marker{display:inline-block;width:7px;height:7px;margin-right:9px;background:var(--blue)}.hero-name{margin:0 0 22px;color:var(--blue);font:11px 'DM Mono';letter-spacing:.16em}.hero h1{margin:0;font-size:clamp(4rem,8vw,8.3rem);line-height:.83;letter-spacing:-.08em;font-weight:600}.hero h1 em{color:var(--blue);font-style:normal}.hero h1 span{color:transparent;-webkit-text-stroke:1px rgba(233,240,247,.72)}.hero-lede{max-width:410px;margin:35px 0 26px;color:#aebbc8;font-size:18px;line-height:1.45}.hero-actions,.resume-actions{display:flex;flex-wrap:wrap;gap:10px}.button{display:inline-flex;align-items:center;gap:12px;padding:13px 16px;border:1px solid var(--line);font:11px 'DM Mono';letter-spacing:.03em;transition:background .2s,border .2s,transform .2s}.button:hover{transform:translateY(-2px);border-color:var(--blue)}.button-primary{background:var(--blue);color:#081018;border-color:var(--blue)}.button-ghost:hover{background:var(--surface2)}.hero-meta{display:flex;gap:24px;margin-top:52px;color:#718092}.hero-meta span:first-child{color:var(--blue)}.hero-art{position:relative}.portrait-wrap{position:relative;max-width:540px;margin-left:auto;border:1px solid var(--line);background:radial-gradient(circle at 50% 38%,#172636 0,#0b1017 58%)}.portrait-wrap:before{content:'';position:absolute;inset:12px;border:1px solid rgba(123,183,255,.15);pointer-events:none}.portrait-canvas{display:block;width:100%;height:auto;mix-blend-mode:screen}.portrait-loading{position:absolute;left:22px;bottom:20px;color:var(--blue);font:10px 'DM Mono';opacity:1;transition:opacity .3s}.portrait-loading.is-ready{opacity:0}.portrait-tag{position:absolute;color:var(--blue-bright);font:10px 'DM Mono';background:var(--bg);padding:4px 6px}.tag-one{top:17%;right:-42px}.tag-two{bottom:24%;left:-38px}.tag-three{bottom:8%;right:4%}.portrait-caption{display:flex;justify-content:space-between;margin-top:15px;color:#637182;line-height:1.5}.signal-strip{display:grid;grid-template-columns:1.4fr repeat(4,1fr);gap:15px;padding:15px 9vw;border-bottom:1px solid var(--line);color:#7d8da0}.signal-strip b{display:block;color:var(--blue);font-weight:400;font-size:10px;margin-top:5px}.live-dot{display:inline-block;width:6px;height:6px;background:var(--blue);border-radius:50%;margin-right:8px;box-shadow:0 0 0 4px rgba(123,183,255,.1)}.section-label{color:var(--blue)}.intro-content,.timeline-heading,.achievement-layout{display:grid;grid-template-columns:1fr 1fr;gap:8vw;margin-top:45px}.intro h2,.section-heading h2,.timeline-heading h2,.achievement-layout h2,.resume h2,.contact h2{margin:0;font-size:clamp(3rem,6vw,7rem);line-height:.86;letter-spacing:-.07em}.intro h2 span,.section-heading h2 span,.timeline-heading h2 span,.achievement-layout h2 span,.resume h2 span,.contact h2 span{color:var(--blue)}.large-copy{max-width:560px;margin:0 0 26px;font-size:clamp(1.4rem,2.3vw,2.1rem);line-height:1.22}.muted,.section-heading p,.timeline-heading p,.resume-panel p,.contact-content>p{max-width:465px;color:var(--muted);font-size:15px;line-height:1.65}.capabilities,.experience,.achievements{background:#0b1016}.capability-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;margin-top:45px;border:1px solid var(--line);background:var(--line)}.capability-grid article{min-height:260px;padding:24px;background:var(--bg)}.capability-top{display:flex;justify-content:space-between;color:var(--blue);font:12px 'DM Mono'}.capability-top svg{width:20px;height:20px;stroke-width:1.2}.capability-grid h3{margin-top:74px;font-size:16px;letter-spacing:.03em}.capability-grid p{color:var(--muted);font-size:13px;line-height:1.55}.section-heading{max-width:780px}.section-heading h2{margin-top:45px}.section-heading p{margin-top:28px}.project-list{margin-top:75px}.project{display:grid;grid-template-columns:100px 1fr;padding:30px 0 38px;border-top:1px solid var(--line)}.project-index{color:var(--blue);font:18px 'DM Mono'}.project-category{color:var(--blue)}.project h3{margin:12px 0;font-size:clamp(1.5rem,3vw,3rem);letter-spacing:-.045em}.project-overview{margin:0;color:#b1bdc8;font-size:16px}.project-details{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;margin:35px 0 27px}.project-details b{color:#708093;font:10px 'DM Mono'}.project-details p{color:#9ba9b7;font-size:13px;line-height:1.5}.project-footer{display:flex;justify-content:space-between;gap:20px;color:#708093;font:10px 'DM Mono'}.text-link{display:inline-flex;align-items:center;gap:8px;color:var(--blue)}.timeline-heading{margin-bottom:75px}.timeline{max-width:1000px}.timeline-item{display:grid;grid-template-columns:160px 24px 1fr;gap:18px;padding:24px 0;border-top:1px solid var(--line)}.timeline-date{color:#718092;padding-top:3px}.timeline-line{position:relative;border-left:1px solid #3d566f}.timeline-line span{position:absolute;top:6px;left:-4px;width:7px;height:7px;background:#3d566f}.timeline-item.current .timeline-date,.timeline-item.current .timeline-role{color:var(--blue)}.timeline-item.current .timeline-line span{background:var(--blue);box-shadow:0 0 0 5px rgba(123,183,255,.1)}.timeline-role{font-size:21px}.timeline-company{margin-top:4px;color:#9eacb9}.timeline-item p{max-width:640px;margin:16px 0 0;color:var(--muted);font-size:13px;line-height:1.6}.timeline-item.secondary{opacity:.7}.skills-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:55px}.skill-group{border-top:1px solid var(--line);padding-top:18px}.skill-group h3{color:var(--blue);font:11px 'DM Mono'}.skill-group div{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}.skill-group span{padding:7px 9px;border:1px solid var(--line);color:#a7b5c2;font-size:12px}.achievement-layout{margin-top:55px}.achievement-list>div{display:grid;grid-template-columns:38px 1fr;gap:12px;padding:16px 0;border-top:1px solid var(--line)}.achievement-list span{color:var(--blue);font:11px 'DM Mono'}.achievement-list p{margin:0;color:#bac5cf;font-size:14px;line-height:1.45}.resume-panel{max-width:800px;padding:50px;border:1px solid var(--line);background:linear-gradient(135deg,#121c27,#0c1118)}.resume-panel svg{color:var(--blue);margin:55px 0 22px}.resume h2{font-size:clamp(3rem,6vw,6rem)}.resume-panel p{margin:27px 0}.contact{min-height:580px;display:grid;grid-template-columns:1fr 1fr}.contact-content{padding-top:45px}.contact-content>p{margin:35px 0}.contact-email{display:inline-flex;align-items:center;gap:16px;padding-bottom:11px;border-bottom:1px solid var(--blue);color:var(--blue-bright);font-size:clamp(1.15rem,2.3vw,2rem)}.contact-links{display:flex;gap:28px;margin-top:60px;color:#718092;font:11px 'DM Mono'}.contact-links a{display:flex;gap:6px;align-items:center;color:var(--blue)}.footer{padding:35px 9vw 22px;color:#738293}.footer>div:first-child{display:flex;flex-direction:column;gap:8px}.footer strong{color:var(--text);font:500 13px 'Space Grotesk'}.footer span{font-size:10px}.footer-tags{margin-top:42px;color:var(--blue)}.footer-bottom{display:flex;justify-content:space-between;margin-top:65px;padding-top:14px;border-top:1px solid var(--line)}.footer-bottom span:last-child{display:flex;align-items:center;gap:7px;color:var(--blue)}
+@media (max-width:900px){.page-section{padding:100px 6vw}.hero{grid-template-columns:1fr;min-height:0;padding-top:130px}.hero-art{max-width:600px;width:90%;margin:30px auto 0}.capability-grid,.skills-grid{grid-template-columns:repeat(2,1fr)}.signal-strip{grid-template-columns:repeat(2,1fr);gap:14px}.signal-strip div:first-child{grid-column:1/-1}.intro-content,.timeline-heading,.achievement-layout,.contact{grid-template-columns:1fr;gap:35px}.contact{min-height:0}.contact-content{padding-top:0}}
+@media (max-width:620px){.site-nav{height:60px;padding:0 6vw}.brand strong{display:none}.menu-toggle{display:block}.nav-links{display:none;position:absolute;top:60px;left:0;right:0;flex-direction:column;gap:0;padding:8px 6vw 18px;border-bottom:1px solid var(--line);background:#0a0e14}.nav-links.open{display:flex}.nav-links a{padding:14px 0}.hero h1{font-size:clamp(3.6rem,16vw,6rem)}.hero-lede{font-size:16px}.hero-art{width:100%}.tag-one{right:4px}.tag-two{left:4px}.signal-strip{padding:15px 6vw;font-size:9px}.page-section{padding:85px 6vw}.intro h2,.section-heading h2,.timeline-heading h2,.achievement-layout h2,.resume h2,.contact h2{font-size:clamp(3.2rem,15vw,5rem)}.capability-grid,.skills-grid{grid-template-columns:1fr}.capability-grid article{min-height:210px}.capability-grid h3{margin-top:48px}.project{grid-template-columns:42px 1fr}.project-details{grid-template-columns:1fr;gap:12px}.project-footer{flex-direction:column}.timeline-item{grid-template-columns:1fr 14px 3fr;gap:10px}.timeline-date{font-size:9px}.resume-panel{padding:25px}.footer{padding-left:6vw;padding-right:6vw}.footer-bottom{flex-direction:column;gap:14px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+.work .section-label{display:flex;align-items:center;gap:8px}.project-visual-frame{margin:22px 0 25px;overflow:hidden;border:1px solid var(--line);background:#0b1118}.project-visual{position:relative;min-height:190px;display:flex;align-items:center;justify-content:center;overflow:hidden;color:var(--blue);background:linear-gradient(135deg,#101c28,#0a0f15)}.project-visual:after{content:"";position:absolute;inset:14px;border:1px solid rgba(123,183,255,.14);pointer-events:none}.mapper-visual span{position:absolute;z-index:1;padding:8px 10px;border:1px solid rgba(123,183,255,.35);color:#b4d7ff;font:10px 'DM Mono'}.mapper-visual span:nth-of-type(1){top:30%;left:25%}.mapper-visual span:nth-of-type(2){right:23%;bottom:28%}.mapper-visual i{position:absolute;width:90px;height:1px;background:var(--blue);opacity:.5;transform:rotate(25deg)}.mapper-visual i:nth-of-type(1){left:34%;top:45%}.mapper-visual i:nth-of-type(2){right:32%;top:50%;transform:rotate(-28deg)}.mapper-visual i:nth-of-type(3){left:40%;bottom:32%;transform:rotate(-5deg)}.dashboard-visual{display:block;padding:25px}.dashboard-metrics{position:relative;z-index:1;display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.dashboard-metrics b{padding:10px;background:#172536;color:var(--blue-bright);font:20px 'DM Mono'}.dashboard-metrics small{display:block;margin-top:5px;color:#768ba0;font:8px 'DM Mono'}.dashboard-chart{position:relative;z-index:1;display:flex;align-items:end;gap:8px;height:72px;margin:25px 0 12px;padding:12px;border:1px solid var(--line)}.dashboard-chart i{display:block;flex:1;background:var(--blue);opacity:.65}.dashboard-chart i:nth-child(1){height:35%}.dashboard-chart i:nth-child(2){height:57%}.dashboard-chart i:nth-child(3){height:45%}.dashboard-chart i:nth-child(4){height:80%}.dashboard-chart i:nth-child(5){height:62%}.dashboard-chart i:nth-child(6){height:92%}.dashboard-chart i:nth-child(7){height:70%}.dashboard-bars{display:flex;gap:5px}.dashboard-bars span{height:5px;flex:1;background:#3e607f}.materials-visual>div,.itsm-visual>div{display:flex;flex-direction:column;gap:8px;margin-left:25px}.materials-visual span,.itsm-visual span{padding:5px 8px;border-left:2px solid var(--blue);color:#9fb8d0;font:10px 'DM Mono'}.itsm-visual{justify-content:flex-start;padding-left:25%}.project-title-row{display:flex;align-items:flex-start;justify-content:space-between;gap:20px}.project-status{flex:none;padding:6px 8px;border:1px solid rgba(123,183,255,.32);color:var(--blue);font:9px 'DM Mono';letter-spacing:.04em}.project-tech{display:flex;flex-wrap:wrap;gap:7px;margin:25px 0}.project-tech span{padding:6px 8px;border:1px solid var(--line);color:#9eafbf;font:10px 'DM Mono'}.project-action{display:inline-flex}.case-study-button{border:0;background:none;cursor:pointer;font-family:'DM Mono'}.project-kind{color:#647689}.case-study-backdrop{position:fixed;z-index:30;inset:0;display:grid;place-items:center;padding:25px;background:rgba(3,6,10,.84);backdrop-filter:blur(8px)}.case-study-modal{position:relative;width:min(850px,100%);max-height:90vh;overflow:auto;padding:38px;border:1px solid var(--line);background:#0d151e;box-shadow:0 30px 80px rgba(0,0,0,.45)}.case-study-close{position:absolute;top:20px;right:20px;display:grid;place-items:center;width:34px;height:34px;border:1px solid var(--line);background:transparent;color:var(--text);cursor:pointer}.case-study-modal h2{max-width:650px;margin:22px 0;font-size:clamp(2rem,5vw,4.5rem);line-height:.9;letter-spacing:-.06em}.case-study-preview{margin:25px 0}.case-study-copy{display:grid;grid-template-columns:1fr 1fr;gap:25px}.case-study-copy b{color:var(--blue);font:10px 'DM Mono'}.case-study-copy p,.case-study-copy li{color:#a9b6c3;font-size:13px;line-height:1.6}.case-study-copy ul{padding-left:18px}.case-study-copy>div:last-child{grid-column:1/-1}
+@media (max-width:620px){.project-title-row{display:block}.project-status{display:inline-block;margin-top:15px}.project-visual{min-height:160px}.project-footer{align-items:flex-start}.case-study-modal{padding:25px}.case-study-copy{grid-template-columns:1fr}.case-study-copy>div:last-child{grid-column:auto}}
+.portrait-wrap{position:relative;max-width:540px;margin-left:auto;padding:18px 18px 16px;border:1px solid rgba(123,183,255,.28);background:linear-gradient(145deg,#101a25,#080c12);box-shadow:0 20px 55px rgba(0,0,0,.22),inset 0 0 0 1px rgba(255,255,255,.025);overflow:visible}.portrait-wrap:before{inset:8px;border:1px solid rgba(123,183,255,.16)}.portrait-hud-top,.portrait-hud-bottom{position:relative;z-index:3;display:flex;justify-content:space-between;gap:16px;color:#7790a8;font:9px 'DM Mono';letter-spacing:.08em}.portrait-hud-top{padding:0 2px 12px}.portrait-hud-bottom{padding:12px 2px 0}.portrait-hud-top i{display:inline-block;width:6px;height:6px;margin-right:7px;border-radius:50%;background:var(--blue);box-shadow:0 0 0 4px rgba(123,183,255,.1);animation:portrait-status 2.6s ease-in-out infinite}.portrait-hud-role{position:absolute;z-index:4;top:54px;left:28px;color:#a5c8eb;font:9px 'DM Mono';letter-spacing:.08em}.portrait-media{position:relative;isolation:isolate;aspect-ratio:1 / 1;overflow:hidden;border:1px solid rgba(123,183,255,.18);background:#0b1017}.portrait-image{object-fit:cover;object-position:center top;filter:grayscale(1) sepia(.14) hue-rotate(174deg) saturate(.72) contrast(1.12) brightness(.9);transform:scale(1.015)}.portrait-tint{position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(10,21,34,.12),rgba(8,15,24,.1) 48%,rgba(5,10,16,.34)),linear-gradient(90deg,rgba(40,104,164,.12),transparent 42%,rgba(19,68,111,.14));mix-blend-mode:screen;pointer-events:none}.portrait-grid{position:absolute;inset:0;z-index:2;background:linear-gradient(rgba(123,183,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(123,183,255,.07) 1px,transparent 1px);background-size:20% 20%;mask-image:linear-gradient(90deg,transparent,black 16%,black 84%,transparent);opacity:.42;pointer-events:none}.portrait-scanlines{position:absolute;inset:0;z-index:3;background:repeating-linear-gradient(0deg,rgba(178,218,255,.07) 0,rgba(178,218,255,.07) 1px,transparent 1px,transparent 5px);opacity:.28;animation:portrait-scan 8s linear infinite;pointer-events:none}.portrait-crosshair{position:absolute;z-index:4;width:18px;height:18px;border-color:rgba(180,215,255,.7);pointer-events:none}.crosshair-top{top:14px;right:14px;border-top:1px solid;border-right:1px solid}.crosshair-bottom{bottom:14px;left:14px;border-bottom:1px solid;border-left:1px solid}.portrait-tag{z-index:5;background:#080b10;border:1px solid rgba(123,183,255,.2);box-shadow:0 0 14px rgba(20,61,102,.2)}.tag-one{top:22%;right:-43px}.tag-two{bottom:25%;left:-38px}.tag-three{bottom:8%;right:4%}@keyframes portrait-scan{from{background-position:0 0}to{background-position:0 24px}}@keyframes portrait-status{0%,100%{opacity:.55}50%{opacity:1}}
+@media (max-width:900px){.portrait-wrap{width:100%;margin:0 auto}.portrait-hud-role{top:54px}}
+@media (max-width:620px){.portrait-wrap{padding:13px 13px 12px}.portrait-hud-top,.portrait-hud-bottom{font-size:8px}.portrait-hud-role{top:45px;left:22px;font-size:8px}.portrait-media{aspect-ratio:1 / 1.02}.portrait-grid{background-size:25% 25%;opacity:.28}.portrait-scanlines{opacity:.2}.portrait-tag{font-size:8px}.tag-one{top:20%;right:3px}.tag-two{bottom:24%;left:3px}.tag-three{bottom:7%;right:3px}}
+@media (prefers-reduced-motion:reduce){.portrait-scanlines,.portrait-hud-top i{animation:none}}
+.mapper-visual{display:block;padding:22px;font:10px 'DM Mono'}.mapper-root,.mapper-branch b,.mapper-branch span{position:absolute;z-index:1;border:1px solid rgba(123,183,255,.42);background:#101a25;padding:7px 9px;color:#c4e0ff}.mapper-root{top:22px;left:50%;transform:translateX(-50%);color:var(--blue)}.mapper-branch{position:absolute;top:78px;display:flex;flex-direction:column;gap:7px}.branch-one{left:20%}.branch-two{right:20%}.mapper-branch b{color:var(--blue);position:static}.mapper-branch span{position:static;padding:5px 8px;color:#91a9bf}.mapper-branch:before{content:"";position:absolute;top:-24px;left:50%;height:22px;border-left:1px solid var(--blue);opacity:.55}.branch-one:after,.branch-two:after{content:"";position:absolute;top:-1px;left:50%;height:1px;width:70px;background:var(--blue);opacity:.35}.branch-one:after{transform:translateX(0)}.branch-two:after{transform:translateX(-70px)}.visual-stamp{position:absolute;bottom:16px;left:20px;color:#718ba2;font:9px 'DM Mono';letter-spacing:.08em}.materials-visual{display:block;padding:22px;text-align:center;font:10px 'DM Mono'}.process-node{display:inline-block;border:1px solid rgba(123,183,255,.42);padding:8px 12px;color:var(--blue-bright);background:#101a25}.process-flow{display:flex;align-items:center;justify-content:center;gap:7px;margin-top:32px}.process-flow span{padding:7px 6px;border-left:2px solid var(--blue);color:#b0c6db}.process-flow i{width:18px;height:1px;background:var(--blue);opacity:.5}.materials-visual .visual-stamp{right:20px;left:auto}.itsm-visual{padding:20px}.ticket-shell{width:min(480px,90%);padding:16px;border:1px solid rgba(123,183,255,.3);background:#0e1823;font:10px 'DM Mono'}.ticket-shell small{color:#748ca2}.ticket-flow{display:flex;align-items:center;gap:6px;margin:22px 0}.ticket-flow span{padding:8px 6px;border:1px solid rgba(123,183,255,.35);color:#b8d5ed}.ticket-flow i{width:13px;height:1px;background:var(--blue);opacity:.5}.ticket-meta{display:flex;justify-content:space-between;color:#6f879c;font-size:9px}.portrait-wrap:after{content:"";position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(0deg,rgba(123,183,255,.035) 0,rgba(123,183,255,.035) 1px,transparent 1px,transparent 5px);mix-blend-mode:screen}.portrait-canvas{position:relative;z-index:1}.portrait-tag,.portrait-loading{z-index:2}
+@media (max-width:620px){.process-flow{gap:3px}.process-flow span{font-size:8px;padding:6px 3px}.process-flow i{width:7px}.ticket-flow{gap:3px}.ticket-flow span{font-size:8px;padding:6px 3px}.ticket-flow i{width:6px}.mapper-visual{padding:16px}.branch-one{left:12%}.branch-two{right:12%}}
+
+.feature-demo{margin:28px 0 6px;padding:22px;border:1px solid rgba(123,183,255,.24);background:linear-gradient(135deg,rgba(16,28,40,.94),rgba(8,13,20,.96));font:10px 'DM Mono';color:#a9bbcc}.demo-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:20px;padding-bottom:18px;border-bottom:1px solid var(--line)}.demo-kicker,.demo-status,.panel-label{color:#7892ab;font:9px 'DM Mono';letter-spacing:.08em}.demo-heading h3{margin:7px 0 0;color:var(--text);font:500 17px 'Space Grotesk';letter-spacing:.02em}.demo-status{padding:5px 7px;border:1px solid rgba(123,183,255,.28);white-space:nowrap}.mapper-workbench{display:grid;grid-template-columns:190px 1fr;gap:24px;padding:22px 0}.mapper-inputs{display:grid;gap:12px}.mapper-inputs label,.dashboard-filters label,.itsm-form label{display:grid;gap:6px;color:#88a0b6;font-size:9px;letter-spacing:.06em}.mapper-inputs input,.dashboard-filters select,.itsm-form input,.itsm-form select,.itsm-form textarea,.palette-search input{width:100%;border:1px solid rgba(123,183,255,.22);border-radius:0;background:#0a1119;color:var(--text);padding:9px;font:11px 'DM Mono';outline:none}.mapper-inputs input:focus,.dashboard-filters select:focus,.itsm-form input:focus,.itsm-form select:focus,.itsm-form textarea:focus,.palette-search input:focus{border-color:var(--blue);box-shadow:0 0 0 2px rgba(123,183,255,.1)}.demo-button{display:inline-flex;align-items:center;justify-content:center;gap:7px;border:1px solid var(--blue);background:rgba(123,183,255,.08);color:var(--blue-bright);padding:10px 12px;font:10px 'DM Mono';cursor:pointer}.demo-button:hover,.demo-button:focus-visible{background:rgba(123,183,255,.18)}.demo-button:disabled{cursor:default;opacity:.55}.mapper-pipeline{position:relative;display:grid;grid-template-columns:repeat(5,1fr);align-items:start;gap:8px;padding-top:8px}.pipeline-step{position:relative;display:grid;gap:7px;justify-items:center;text-align:center;color:#8398aa}.pipeline-step span{display:grid;place-items:center;width:25px;height:25px;border:1px solid rgba(123,183,255,.3);color:var(--blue)}.pipeline-step b{font-size:8px;font-weight:400}.pipeline-step i{position:absolute;top:12px;left:calc(50% + 17px);width:calc(100% - 14px);height:1px;background:rgba(123,183,255,.25)}.pipeline-step.active span,.pipeline-step.complete span{background:var(--blue);color:#07101a}.pipeline-step.active b,.pipeline-step.complete b{color:var(--blue-bright)}.mapping-result{grid-column:1/-1;display:none;align-items:center;gap:8px;margin-top:18px;padding:10px;border:1px solid rgba(123,183,255,.3);color:var(--blue-bright)}.mapping-result.visible{display:flex}.mapping-result span{color:#8ea6b9}.code-viewer{border-top:1px solid var(--line);background:#080e15}.code-header{display:flex;align-items:center;justify-content:space-between;padding:10px 12px;border-bottom:1px solid var(--line);color:#7892ab}.code-header button,.copy-email{display:inline-flex;align-items:center;gap:6px;border:1px solid rgba(123,183,255,.3);background:transparent;color:var(--blue);padding:6px 8px;font:9px 'DM Mono';cursor:pointer}.code-viewer pre{margin:0;padding:16px;overflow:auto;color:#bcd9f2;font:11px/1.8 'DM Mono'}.dashboard-filters{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;padding:20px 0}.dashboard-filters select{appearance:auto}.kpi-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:7px}.kpi{padding:12px 10px;border:1px solid var(--line);background:rgba(19,28,38,.72)}.kpi strong{display:block;color:var(--blue-bright);font:20px 'DM Mono'}.kpi span{display:block;margin-top:6px;color:#788fa4;font-size:8px}.dashboard-panels{display:grid;grid-template-columns:1fr 1fr;gap:22px;padding-top:22px}.bar-list,.ticket-table{display:grid;gap:10px;margin-top:14px}.bar-row{display:grid;grid-template-columns:80px 1fr 20px;align-items:center;gap:8px;color:#8da2b5}.bar-row i{height:7px;background:#172635}.bar-row b{display:block;height:100%;background:var(--blue)}.bar-row strong{color:var(--blue);font-weight:400}.ticket-table>div{display:grid;grid-template-columns:70px 1fr 85px 80px;gap:8px;align-items:center;padding:8px 0;border-bottom:1px solid var(--line);color:#91a8bb}.ticket-table b{color:var(--text);font-weight:400}.ticket-table em{font-style:normal;font-size:8px;text-align:right}.status-resolved{color:#8fd1ae}.status-in-progress{color:var(--blue)}.status-open{color:#e0bd7c}.status-on-hold{color:#bd9be8}.itsm-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:25px;padding-top:22px}.itsm-form{display:grid;gap:12px}.itsm-form textarea{resize:vertical}.ticket-card{min-height:260px;padding:18px;border:1px solid rgba(123,183,255,.23);background:#0b131d}.ticket-card h4{margin:10px 0 18px;color:var(--text);font:500 18px 'Space Grotesk'}.ticket-facts{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.ticket-facts span{display:grid;gap:6px;color:#7892ab;font-size:8px}.ticket-facts strong{color:#c1d4e5;font-weight:400}.lifecycle{display:flex;gap:5px;margin:25px 0}.lifecycle span{padding:7px 6px;border:1px solid var(--line);color:#71879b;font-size:8px}.lifecycle span.current{border-color:var(--blue);color:var(--blue-bright);background:rgba(123,183,255,.1)}.empty-state{display:grid;place-items:center;gap:12px;min-height:220px;color:#6f879d;text-align:center}.palette-trigger{position:fixed;z-index:19;right:5vw;bottom:24px;display:flex;align-items:center;gap:7px;border:1px solid rgba(123,183,255,.35);background:rgba(8,11,16,.9);color:var(--blue);padding:9px 11px;font:10px 'DM Mono';cursor:pointer;box-shadow:0 8px 30px rgba(0,0,0,.3)}.palette-backdrop{position:fixed;z-index:30;inset:0;display:grid;place-items:start center;padding-top:15vh;background:rgba(3,6,10,.72);backdrop-filter:blur(8px)}.command-palette{width:min(560px,calc(100vw - 32px));border:1px solid rgba(123,183,255,.35);background:#0d151f;box-shadow:0 24px 80px rgba(0,0,0,.55)}.palette-search{display:flex;align-items:center;gap:10px;padding:14px;border-bottom:1px solid var(--line);color:var(--blue)}.palette-search input{border:0;padding:0;background:transparent}.palette-search input:focus{box-shadow:none}.palette-search button{border:0;background:transparent;color:#8ea6b9;cursor:pointer}.command-list{display:grid;max-height:340px;overflow:auto;padding:8px}.command-list button{display:flex;justify-content:space-between;border:0;background:transparent;color:#b5c5d4;padding:12px 10px;text-align:left;font:11px 'DM Mono';cursor:pointer}.command-list button:hover,.command-list button:focus-visible{background:rgba(123,183,255,.1);color:var(--blue-bright)}.palette-hint{display:flex;justify-content:space-between;padding:10px 14px;border-top:1px solid var(--line);color:#657b8e;font:9px 'DM Mono'}.github-heading{display:grid;grid-template-columns:1fr 1fr;gap:7vw;align-items:end;margin:30px 0}.github-heading h2{margin:0;font-size:clamp(3.5rem,7vw,7rem);line-height:.85;letter-spacing:-.07em}.github-heading h2 span{color:transparent;-webkit-text-stroke:1px rgba(233,240,247,.72)}.github-heading p{max-width:420px;margin:0;color:#9cadbc;line-height:1.6}.github-repos{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line)}.github-repos a{display:grid;grid-template-columns:1fr auto;gap:8px;padding:18px 12px 18px 0;border-bottom:1px solid var(--line);color:var(--blue-bright)}.github-repos a+ a{padding-left:18px;border-left:1px solid var(--line)}.github-repos small{color:#71879b;font:9px 'DM Mono'}.github-repos svg{grid-column:2;grid-row:1/3}.email-row{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+@media (max-width:900px){.mapper-workbench,.itsm-grid,.github-heading{grid-template-columns:1fr}.kpi-grid{grid-template-columns:repeat(3,1fr)}.github-repos{grid-template-columns:1fr}.github-repos a+ a{padding-left:0;border-left:0}.dashboard-panels{grid-template-columns:1fr}}
+@media (max-width:620px){.feature-demo{padding:15px}.demo-heading{display:block}.demo-status{display:inline-block;margin-top:12px}.mapper-pipeline{gap:3px}.pipeline-step b{font-size:7px}.pipeline-step i{left:calc(50% + 14px);width:calc(100% - 10px)}.mapping-result{display:none;align-items:flex-start;flex-wrap:wrap;font-size:9px}.mapping-result.visible{display:flex}.mapping-result span{width:100%;line-height:1.5}.dashboard-filters{grid-template-columns:repeat(2,1fr)}.kpi-grid{grid-template-columns:repeat(2,1fr)}.ticket-table>div{grid-template-columns:60px 1fr 70px}.ticket-table em{display:none}.ticket-facts{grid-template-columns:repeat(2,1fr);gap:14px}.lifecycle{flex-wrap:wrap}.palette-trigger{right:6vw;bottom:16px}.github-heading h2{font-size:clamp(3.2rem,15vw,5rem)}}
+</file>
+
+</files>

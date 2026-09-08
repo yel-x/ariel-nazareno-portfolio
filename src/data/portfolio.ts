@@ -21,7 +21,7 @@ export const projects = [
 
 export const experience = [
   { date: "CURRENT", role: "ERP Technical Support Specialist", company: "Mary Grace", detail: "Product, supplier, GL, and cost center master data; SAP S/4HANA Public Edition configuration; access management; data migration; and related SAP support. Participates in SAP integration with MGIOS, SIS, MOS, and POS. Tools include SAP S/4HANA Public Edition and Adobe LiveCycle for PO.", current: true },
-  { date: "MAY 2025 — APRIL 2026", role: "SAP Security Consultant", company: "Cuatrix Consulting Services Company Limited", detail: "SAP Security support, role development, access management, user maintenance, and cross-functional collaboration across S/4HANA implementation work." },
+  { date: "MAY 2025 — APR 2026", role: "SAP Security Consultant", company: "Cuatrix Consulting Services Company Limited", detail: "SAP Security support, role development, access management, user maintenance, and cross-functional collaboration across S/4HANA implementation work." },
   { date: "JAN — APR 2025", role: "IT Consultant Intern", company: "Cuatrix Consulting Services Company Limited", detail: "SAP HANA database administration, database role design, access control, privilege allocation, and collaboration around system stability, security, and performance." },
   { date: "SEP 2021 — NOV 2023", role: "Service Crew", company: "Jollibee Calamba Shopping", detail: "Customer service, order processing, cash transactions, and POS systems in a fast-paced environment.", secondary: true },
 ];
