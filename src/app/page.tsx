@@ -3,10 +3,10 @@
 import { ArrowUpRight, BarChart3, Braces, Database, Download, ExternalLink, FileText, Network, ShieldCheck, TerminalSquare, Wrench, X } from "lucide-react";
 import { motion, AnimatePresence, Variants } from "framer-motion";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Navigation } from "@/components/Navigation";
 import { TypographicPortrait } from "@/components/TypographicPortrait";
-import { CommandPalette, CopyEmail, GithubActivity, ItsmPrototype, MasterDataPlayground, TaskDashboardDemo, TechnicalArchitecture } from "@/components/InteractiveFeatures";
+import { CommandPalette, CopyEmail, GithubActivity, ItsmPrototype, MasterDataPlayground, TaskDashboardDemo, TechnicalArchitecture, TerminalConsoleModal } from "@/components/InteractiveFeatures";
 import { achievements, capabilities, experience, projects, skillGroups } from "@/data/portfolio";
 
 // Strictly Typed Variants para sa Framer Motion
@@ -40,6 +40,24 @@ const icons = [<ShieldCheck key="a" />, <Wrench key="b" />, <Braces key="c" />, 
 
 export default function Home() {
   const [activeCaseStudy, setActiveCaseStudy] = useState<(typeof projects)[number] | null>(null);
+  const [booting, setBooting] = useState(true);
+  const [bootProgress, setBootProgress] = useState(0);
+  const [showTerminal, setShowTerminal] = useState(false);
+
+  // Fast 500ms System Boot Sequence
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setBootProgress((prev) => {
+        if (prev >= 100) {
+          clearInterval(timer);
+          setTimeout(() => setBooting(false), 100);
+          return 100;
+        }
+        return prev + 25;
+      });
+    }, 100);
+    return () => clearInterval(timer);
+  }, []);
 
   const projectVisuals = {
     mapper: (
@@ -100,10 +118,29 @@ export default function Home() {
     ),
   };
 
+  if (booting) {
+    return (
+      <div className="boot-screen">
+        <div className="boot-log">
+          <div>INITIALIZING ARIEL.OS [SYSTEM_PROFILE]...</div>
+          <div>SAP S/4HANA PUBLIC EDITION .......... ONLINE</div>
+          <div>MASTER DATA AUTOMATION PIPELINE .... READY</div>
+          <div className="boot-bar">
+            <div className="boot-progress" style={{ width: `${bootProgress}%` }} />
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <main id="top">
-      <Navigation />
+      <Navigation onOpenTerminal={() => setShowTerminal(true)} />
       <CommandPalette />
+
+      <AnimatePresence>
+        {showTerminal && <TerminalConsoleModal onClose={() => setShowTerminal(false)} />}
+      </AnimatePresence>
 
       {/* Hero Section */}
       <section className="hero page-section">
@@ -151,7 +188,7 @@ export default function Home() {
         <div>SAP S/4HANA <b>ACTIVE</b></div>
         <div>ERP SUPPORT <b>ACTIVE</b></div>
         <div>AUTOMATION <b>ACTIVE</b></div>
-        <div>DATA <b>READY</b></div>
+        <div>DATA PIPELINE <b>READY</b></div>
       </section>
 
       {/* About Section */}

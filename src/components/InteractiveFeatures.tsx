@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowDown, Check, Clipboard, Command, Copy, ExternalLink, GitBranch, Play, Search, X } from "lucide-react";
+import { ArrowDown, Check, Clipboard, Command, Copy, ExternalLink, GitBranch, Play, Search, Terminal, X } from "lucide-react";
 import { FormEvent, useEffect, useMemo, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -17,7 +17,7 @@ export function MasterDataPlayground() {
   function runMapping() {
     setRunning(true);
     setComplete(false);
-    window.setTimeout(() => { setRunning(false); setComplete(true); }, 950);
+    window.setTimeout(() => { setRunning(false); setComplete(true); }, 850);
   }
 
   async function copyCode() {
@@ -45,14 +45,14 @@ export function MasterDataPlayground() {
       <div className="mapper-workbench">
         <div className="mapper-inputs">
           <label>MODULE
-            <select value={module} onChange={(event) => { setModule(event.target.value as (typeof modules)[number]); setComplete(false); }}>
+            <select value={module} onChange={(e) => { setModule(e.target.value as (typeof modules)[number]); setComplete(false); }}>
               {modules.map((option) => <option key={option}>{option}</option>)}
             </select>
           </label>
           {(["material", "plant", "sloc"] as const).map((field) => (
             <label key={field}>
               {field === "sloc" ? "STORAGE LOCATION" : field.toUpperCase()}
-              <input value={values[field]} onChange={(event) => { setValues({ ...values, [field]: event.target.value }); setComplete(false); }} />
+              <input value={values[field]} onChange={(e) => { setValues({ ...values, [field]: e.target.value }); setComplete(false); }} />
             </label>
           ))}
           <button className="demo-button" type="button" onClick={runMapping} disabled={running}>
@@ -79,9 +79,7 @@ export function MasterDataPlayground() {
       <div className="code-viewer">
         <div className="code-header">
           <span>representative_mapping.py</span>
-          <button type="button" onClick={copyCode}>
-            {copied ? <Check size={13} /> : <Copy size={13} />} {copied ? "COPIED" : "COPY"}
-          </button>
+          <button type="button" onClick={copyCode}>{copied ? <Check size={13} /> : <Copy size={13} />} {copied ? "COPIED" : "COPY"}</button>
         </div>
         <pre><code>{codeSample}</code></pre>
       </div>
@@ -104,8 +102,8 @@ const tickets: Ticket[] = [
 export function TaskDashboardDemo() {
   const [filters, setFilters] = useState({ week: "ALL", assignee: "ALL", status: "ALL", priority: "ALL" });
   const filtered = useMemo(() => tickets.filter((ticket) => Object.entries(filters).every(([key, value]) => value === "ALL" || ticket[key as keyof Ticket] === value)), [filters]);
-  const resolved = filtered.filter((ticket) => ticket.status === "Resolved").length;
-  const sla = filtered.length ? Math.round((filtered.filter((ticket) => ticket.sla).length / filtered.length) * 100) : 0;
+  const resolved = filtered.filter((t) => t.status === "Resolved").length;
+  const sla = filtered.length ? Math.round((filtered.filter((t) => t.sla).length / filtered.length) * 100) : 0;
   const statuses = ["Resolved", "In Progress", "Open", "On Hold"];
   const priorities = ["Critical", "High", "Medium", "Low"];
 
@@ -120,13 +118,10 @@ export function TaskDashboardDemo() {
       </div>
       <div className="dashboard-filters">
         {Object.entries(filters).map(([key, value]) => (
-          <label key={key}>
-            {key.toUpperCase()}
-            <select value={value} onChange={(event) => setFilters({ ...filters, [key]: event.target.value })}>
+          <label key={key}>{key.toUpperCase()}
+            <select value={value} onChange={(e) => setFilters({ ...filters, [key]: e.target.value })}>
               <option>ALL</option>
-              {[...new Set(tickets.map((ticket) => ticket[key as keyof Ticket] as string))].map((option) => (
-                <option key={option}>{option}</option>
-              ))}
+              {[...new Set(tickets.map((t) => t[key as keyof Ticket] as string))].map((opt) => <option key={opt}>{opt}</option>)}
             </select>
           </label>
         ))}
@@ -134,30 +129,30 @@ export function TaskDashboardDemo() {
       <div className="kpi-grid">
         <Metric label="TOTAL TICKETS" value={filtered.length} />
         <Metric label="RESOLVED" value={resolved} />
-        <Metric label="OPEN" value={filtered.filter((ticket) => ticket.status === "Open").length} />
-        <Metric label="IN PROGRESS" value={filtered.filter((ticket) => ticket.status === "In Progress").length} />
-        <Metric label="ON HOLD" value={filtered.filter((ticket) => ticket.status === "On Hold").length} />
+        <Metric label="OPEN" value={filtered.filter((t) => t.status === "Open").length} />
+        <Metric label="IN PROGRESS" value={filtered.filter((t) => t.status === "In Progress").length} />
+        <Metric label="ON HOLD" value={filtered.filter((t) => t.status === "On Hold").length} />
         <Metric label="OVERALL SLA" value={`${sla}%`} />
       </div>
       <div className="dashboard-panels">
         <div>
           <div className="panel-label">TICKET STATUS BREAKDOWN</div>
           <div className="bar-list">
-            {statuses.map((status) => (
-              <div className="bar-row" key={status}>
-                <span>{status}</span>
-                <i><b style={{ width: `${filtered.length ? (filtered.filter((ticket) => ticket.status === status).length / filtered.length) * 100 : 0}%` }} /></i>
-                <strong>{filtered.filter((ticket) => ticket.status === status).length}</strong>
+            {statuses.map((s) => (
+              <div className="bar-row" key={s}>
+                <span>{s}</span>
+                <i><b style={{ width: `${filtered.length ? (filtered.filter((t) => t.status === s).length / filtered.length) * 100 : 0}%`, transition: "width 0.4s ease-out" }} /></i>
+                <strong>{filtered.filter((t) => t.status === s).length}</strong>
               </div>
             ))}
           </div>
           <div className="panel-label dashboard-subpanel">TICKETS BY PRIORITY</div>
           <div className="bar-list">
-            {priorities.map((priority) => (
-              <div className="bar-row" key={priority}>
-                <span>{priority}</span>
-                <i><b style={{ width: `${filtered.length ? (filtered.filter((ticket) => ticket.priority === priority).length / filtered.length) * 100 : 0}%` }} /></i>
-                <strong>{filtered.filter((ticket) => ticket.priority === priority).length}</strong>
+            {priorities.map((p) => (
+              <div className="bar-row" key={p}>
+                <span>{p}</span>
+                <i><b style={{ width: `${filtered.length ? (filtered.filter((t) => t.priority === p).length / filtered.length) * 100 : 0}%`, transition: "width 0.4s ease-out" }} /></i>
+                <strong>{filtered.filter((t) => t.priority === p).length}</strong>
               </div>
             ))}
           </div>
@@ -165,22 +160,16 @@ export function TaskDashboardDemo() {
         <div>
           <div className="panel-label">SAMPLE TICKET STREAM</div>
           <div className="ticket-table">
-            {filtered.slice(0, 5).map((ticket, index) => (
-              <div key={`${ticket.week}-${index}`}>
-                <span>{ticket.week}</span>
-                <b>{ticket.department}</b>
-                <span>{ticket.assignee}</span>
-                <em className={`status-${ticket.status.toLowerCase().replace(" ", "-")}`}>{ticket.status}</em>
+            {filtered.slice(0, 5).map((t, index) => (
+              <div key={`${t.week}-${index}`}>
+                <span>{t.week}</span><b>{t.department}</b><span>{t.assignee}</span><em className={`status-${t.status.toLowerCase().replace(" ", "-")}`}>{t.status}</em>
               </div>
             ))}
           </div>
           <div className="panel-label dashboard-subpanel">ASSIGNEE PERFORMANCE</div>
           <div className="assignee-list">
-            {["A. Santos", "M. Cruz", "J. Reyes"].map((assignee) => (
-              <span key={assignee}>
-                {assignee}
-                <b>{filtered.filter((ticket) => ticket.assignee === assignee && ticket.status === "Resolved").length} RESOLVED</b>
-              </span>
+            {["A. Santos", "M. Cruz", "J. Reyes"].map((a) => (
+              <span key={a}>{a}<b>{filtered.filter((t) => t.assignee === a && t.status === "Resolved").length} RESOLVED</b></span>
             ))}
           </div>
         </div>
@@ -190,12 +179,7 @@ export function TaskDashboardDemo() {
 }
 
 function Metric({ label, value }: { label: string; value: string | number }) {
-  return (
-    <div className="kpi">
-      <strong>{value}</strong>
-      <span>{label}</span>
-    </div>
-  );
+  return <div className="kpi"><strong>{value}</strong><span>{label}</span></div>;
 }
 
 type Lifecycle = "NEW" | "ASSIGNED" | "IN PROGRESS" | "RESOLVED";
@@ -206,8 +190,8 @@ export function ItsmPrototype() {
   const [priority, setPriority] = useState("HIGH");
   const [nextId, setNextId] = useState(1);
 
-  function createTicket(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
+  function createTicket(e: FormEvent<HTMLFormElement>) {
+    e.preventDefault();
     if (!subject.trim()) return;
     setTicket({ id: `MG-${String(nextId).padStart(3, "0")}`, subject: subject.trim(), status: "NEW" });
     setNextId(nextId + 1);
@@ -232,9 +216,9 @@ export function ItsmPrototype() {
       </div>
       <div className="itsm-grid">
         <form className="itsm-form" onSubmit={createTicket}>
-          <label>SUBJECT<input value={subject} onChange={(event) => setSubject(event.target.value)} placeholder="Describe a fictional issue" /></label>
+          <label>SUBJECT<input value={subject} onChange={(e) => setSubject(e.target.value)} placeholder="Describe a fictional issue" /></label>
           <label>CATEGORY<select defaultValue="ERP"><option>ERP</option><option>ACCESS</option><option>DATA</option></select></label>
-          <label>PRIORITY<select value={priority} onChange={(event) => setPriority(event.target.value)}><option>HIGH</option><option>MEDIUM</option><option>LOW</option></select></label>
+          <label>PRIORITY<select value={priority} onChange={(e) => setPriority(e.target.value)}><option>HIGH</option><option>MEDIUM</option><option>LOW</option></select></label>
           <label>DESCRIPTION<textarea placeholder="Sample description" rows={3} /></label>
           <button className="demo-button" type="submit"><Play size={13} /> CREATE TICKET</button>
         </form>
@@ -250,8 +234,8 @@ export function ItsmPrototype() {
                 <span>SLA<strong>04:00</strong></span>
               </div>
               <div className="lifecycle">
-                {(["NEW", "ASSIGNED", "IN PROGRESS", "RESOLVED"] as Lifecycle[]).map((status) => (
-                  <span className={status === ticket.status ? "current" : ""} key={status}>{status}</span>
+                {(["NEW", "ASSIGNED", "IN PROGRESS", "RESOLVED"] as Lifecycle[]).map((s) => (
+                  <span className={s === ticket.status ? "current" : ""} key={s}>{s}</span>
                 ))}
               </div>
               <button className="demo-button" type="button" disabled={!transition[ticket.status].next} onClick={() => transition[ticket.status].next && setTicket({ ...ticket, status: transition[ticket.status].next as Lifecycle })}>
@@ -259,13 +243,69 @@ export function ItsmPrototype() {
               </button>
             </motion.div>
           ) : (
-            <div className="empty-state">
-              <Clipboard size={24} />
-              <span>CREATE A SAMPLE TICKET TO BEGIN</span>
-            </div>
+            <div className="empty-state"><Clipboard size={24} /><span>CREATE A SAMPLE TICKET TO BEGIN</span></div>
           )}
         </div>
       </div>
+    </div>
+  );
+}
+
+export function TerminalConsoleModal({ onClose }: { onClose: () => void }) {
+  const [history, setHexHistory] = useState<string[]>([
+    "ARIEL.OS [Version 2026.09]",
+    "Type 'help' for available system commands.",
+    ""
+  ]);
+  const [inputVal, setInputVal] = useState("");
+
+  function handleCommand(e: FormEvent) {
+    e.preventDefault();
+    const cmd = inputVal.trim().toLowerCase();
+    let response = "";
+
+    if (cmd === "help") {
+      response = "Available commands: whoami, skills, projects, contact, clear, exit";
+    } else if (cmd === "whoami") {
+      response = "Ariel Nazareno — ERP / SAP Technical Support Specialist";
+    } else if (cmd === "skills") {
+      response = "SAP S/4HANA, HANA, Fiori, Master Data, Python, Excel, Pandas, Next.js, TypeScript";
+    } else if (cmd === "projects") {
+      response = "1. SAP Master Data Mapper\n2. ERP Task Monitoring Dashboard\n3. SAP Material Data Tools\n4. Mary Grace ITSM";
+    } else if (cmd === "contact") {
+      response = "Email: nazarenoariel02@gmail.com | LinkedIn: ariel-nazareno";
+    } else if (cmd === "clear") {
+      setHexHistory([]);
+      setInputVal("");
+      return;
+    } else if (cmd === "exit") {
+      onClose();
+      return;
+    } else if (cmd !== "") {
+      response = `Command not recognized: '${cmd}'. Type 'help' for options.`;
+    }
+
+    setHexHistory((prev) => [...prev, `ARIEL@PORTFOLIO:~$ ${inputVal}`, response].filter(Boolean));
+    setInputVal("");
+  }
+
+  return (
+    <div className="terminal-modal-backdrop" onClick={onClose}>
+      <motion.div className="terminal-modal" onClick={(e) => e.stopPropagation()} initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.95 }}>
+        <div className="terminal-header">
+          <span><Terminal size={13} style={{ display: "inline", marginRight: "6px" }} /> SYSTEM_TERMINAL / CLI_MODE</span>
+          <button onClick={onClose} style={{ background: "none", border: 0, color: "#7bb7ff", cursor: "pointer" }}><X size={14} /></button>
+        </div>
+        <div className="terminal-body">
+          {history.map((line, idx) => (
+            <div key={idx} style={{ whiteSpace: "pre-wrap" }}>{line}</div>
+          ))}
+          <form onSubmit={handleCommand} className="terminal-input-row">
+            <span>ARIEL@PORTFOLIO:~$</span>
+            <input autoFocus value={inputVal} onChange={(e) => setInputVal(e.target.value)} />
+          </form>
+        </div>
+      </motion.div>
     </div>
   );
 }
@@ -278,11 +318,7 @@ const commands = [
   { label: "Open Source", target: "open-source" },
   { label: "Download Resume", target: "resume", download: true },
   { label: "Open GitHub", href: "https://github.com/yel-x" },
-  { label: "Contact Ariel", target: "contact" },
-  { label: "SAP Master Data Mapper", target: "mapper-demo" },
-  { label: "ERP Dashboard", target: "dashboard-demo" },
-  { label: "SAP Material Data Tools", target: "materials-demo" },
-  { label: "Mary Grace ITSM", target: "itsm-demo" }
+  { label: "Contact Ariel", target: "contact" }
 ];
 
 export function CommandPalette() {
@@ -291,33 +327,33 @@ export function CommandPalette() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
-    const handler = (event: KeyboardEvent) => {
-      if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === "k") {
-        event.preventDefault();
+    const handler = (e: KeyboardEvent) => {
+      if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "k") {
+        e.preventDefault();
         setOpen(true);
       }
-      if (event.key === "Escape") setOpen(false);
+      if (e.key === "Escape") setOpen(false);
     };
     window.addEventListener("keydown", handler);
     return () => window.removeEventListener("keydown", handler);
   }, []);
 
-  const filtered = commands.filter((command) => command.label.toLowerCase().includes(query.toLowerCase()));
+  const filtered = commands.filter((cmd) => cmd.label.toLowerCase().includes(query.toLowerCase()));
 
   useEffect(() => { setActiveIndex(0); }, [query]);
 
-  function execute(command: typeof commands[number]) {
+  function execute(cmd: typeof commands[number]) {
     setOpen(false);
     setQuery("");
-    if (command.href) window.open(command.href, "_blank", "noopener,noreferrer");
-    else if (command.download) window.open("/resume.pdf", "_blank");
-    else if (command.target) document.getElementById(command.target)?.scrollIntoView({ behavior: "smooth" });
+    if (cmd.href) window.open(cmd.href, "_blank", "noopener,noreferrer");
+    else if (cmd.download) window.open("/resume.pdf", "_blank");
+    else if (cmd.target) document.getElementById(cmd.target)?.scrollIntoView({ behavior: "smooth" });
   }
 
-  function handlePaletteKey(event: React.KeyboardEvent<HTMLInputElement>) {
-    if (event.key === "ArrowDown") { event.preventDefault(); setActiveIndex((index) => Math.min(index + 1, filtered.length - 1)); }
-    if (event.key === "ArrowUp") { event.preventDefault(); setActiveIndex((index) => Math.max(index - 1, 0)); }
-    if (event.key === "Enter" && filtered[activeIndex]) execute(filtered[activeIndex]);
+  function handlePaletteKey(e: React.KeyboardEvent<HTMLInputElement>) {
+    if (e.key === "ArrowDown") { e.preventDefault(); setActiveIndex((i) => Math.min(i + 1, filtered.length - 1)); }
+    if (e.key === "ArrowUp") { e.preventDefault(); setActiveIndex((i) => Math.max(i - 1, 0)); }
+    if (e.key === "Enter" && filtered[activeIndex]) execute(filtered[activeIndex]);
   }
 
   return (
@@ -328,16 +364,16 @@ export function CommandPalette() {
       <AnimatePresence>
         {open && (
           <motion.div className="palette-backdrop" onClick={() => setOpen(false)} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.15 }}>
-            <motion.div className="command-palette" role="dialog" aria-modal="true" aria-label="Portfolio command palette" onClick={(event) => event.stopPropagation()} initial={{ scale: 0.97, y: -8 }} animate={{ scale: 1, y: 0 }} exit={{ scale: 0.97, y: -8 }} transition={{ duration: 0.15 }}>
+            <motion.div className="command-palette" role="dialog" aria-modal="true" aria-label="Portfolio command palette" onClick={(e) => e.stopPropagation()} initial={{ scale: 0.97, y: -8 }} animate={{ scale: 1, y: 0 }} exit={{ scale: 0.97, y: -8 }} transition={{ duration: 0.15 }}>
               <div className="palette-search">
                 <Search size={16} />
-                <input autoFocus value={query} onKeyDown={handlePaletteKey} onChange={(event) => setQuery(event.target.value)} placeholder="Search portfolio..." />
+                <input autoFocus value={query} onKeyDown={handlePaletteKey} onChange={(e) => setQuery(e.target.value)} placeholder="Search portfolio..." />
                 <button type="button" onClick={() => setOpen(false)} aria-label="Close command palette"><X size={16} /></button>
               </div>
               <div className="command-list">
-                {filtered.map((command, index) => (
-                  <button className={index === activeIndex ? "active" : ""} type="button" key={command.label} onClick={() => execute(command)}>
-                    {command.label}<ExternalLink size={13} />
+                {filtered.map((cmd, index) => (
+                  <button className={index === activeIndex ? "active" : ""} type="button" key={cmd.label} onClick={() => execute(cmd)}>
+                    {cmd.label}<ExternalLink size={13} />
                   </button>
                 ))}
                 {!filtered.length && <span className="empty-state">NO COMMANDS FOUND</span>}
@@ -356,14 +392,9 @@ export function GithubActivity() {
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
-    // Correct API call fetching ALL public repos sorted by updated date (100 limit max)
-    fetch("https://api.github.com/users/yel-x/repos?type=all&sort=updated&per_page=100")
-      .then((response) => response.ok ? response.json() : [])
-      .then((data) => {
-        if (Array.isArray(data)) {
-          setRepos(data);
-        }
-      })
+    fetch("https://api.github.com/users/yel-x/repos?sort=updated&per_page=100")
+      .then((res) => res.ok ? res.json() : [])
+      .then((data) => { if (Array.isArray(data)) setRepos(data); })
       .catch(() => setRepos([]))
       .finally(() => setLoaded(true));
   }, []);
@@ -395,6 +426,7 @@ export function GithubActivity() {
 }
 
 export function TechnicalArchitecture() {
+  const [activeLayer, setActiveLayer] = useState<number | null>(null);
   const layers = [
     ["SAP / ERP", "S/4HANA", "Fiori", "Master Data", "Access / Security"], 
     ["AUTOMATION", "Python", "Pandas", "Excel"], 
@@ -404,11 +436,11 @@ export function TechnicalArchitecture() {
 
   return (
     <section className="architecture page-section" aria-label="Technical architecture">
-      <div className="section-label">10 / TECHNICAL ARCHITECTURE</div>
+      <div className="section-label">10 / TECHNICAL ARCHITECTURE INSPECTION</div>
       <div className="architecture-flow">
         {layers.map((layer, index) => (
           <div key={layer[0]}>
-            <div className="architecture-layer">
+            <div className={`architecture-layer ${activeLayer === index ? "active" : ""}`} onClick={() => setActiveLayer(activeLayer === index ? null : index)} style={{ cursor: "pointer" }}>
               <strong>{layer[0]}</strong>
               <div>{layer.slice(1).map((item) => <span key={item}>{item}</span>)}</div>
             </div>
